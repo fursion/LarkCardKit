@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "eHE9nE/xBAg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\60435\\Desktop\\LarkCardKit\\LarkCardKit\\LarkCardKit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\60435\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Text.Json 将不会删除。请考虑从依赖项中移除此包，因为可能不需要它。",
+      "projectPath": "C:\\Users\\60435\\Desktop\\LarkCardKit\\LarkCardKit\\LarkCardKit.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\60435\\Desktop\\LarkCardKit\\LarkCardKit\\LarkCardKit.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

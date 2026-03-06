@@ -1,0 +1,11 @@
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\bin\Release\net10.0\LarkCardKit.deps.json
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\bin\Release\net10.0\LarkCardKit.dll
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\bin\Release\net10.0\LarkCardKit.pdb
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\LarkCardKit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\LarkCardKit.AssemblyInfoInputs.cache
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\LarkCardKit.AssemblyInfo.cs
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\LarkCardKit.csproj.CoreCompileInputs.cache
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\LarkCardKit.dll
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\refint\LarkCardKit.dll
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\LarkCardKit.pdb
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\obj\Release\net10.0\ref\LarkCardKit.dll

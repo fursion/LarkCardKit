@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "LarkCardKit.Examples/1.0.0": {
+        "dependencies": {
+          "LarkCardKit": "1.0.0"
+        },
+        "runtime": {
+          "LarkCardKit.Examples.dll": {}
+        }
+      },
+      "LarkCardKit/1.0.0": {
+        "runtime": {
+          "LarkCardKit.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LarkCardKit.Examples/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LarkCardKit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
