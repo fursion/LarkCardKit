@@ -101,7 +101,7 @@ public class Input : Element
     /// </summary>
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool? Disabled { get; set; }
+    public object? Disabled { get; set; }
     
     /// <summary>
     /// 禁用提示

@@ -83,3 +83,21 @@ public class FormResetBehavior
     [JsonPropertyName("type")]
     public string Type => "form_reset";
 }
+
+/// <summary>
+/// URL 点击行为（飞书卡片 2.0 格式）
+/// </summary>
+public class UrlClickAction
+{
+    /// <summary>
+    /// 交互类型
+    /// </summary>
+    [JsonPropertyName("type")]
+    public string Type => "open_url";
+
+    /// <summary>
+    /// 跳转地址
+    /// </summary>
+    [JsonPropertyName("url")]
+    public string Url { get; set; } = string.Empty;
+}

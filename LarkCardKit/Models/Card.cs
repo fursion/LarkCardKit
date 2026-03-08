@@ -44,7 +44,7 @@ public class Card
     /// </summary>
     [JsonPropertyName("card_link")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public object? CardLink { get; set; }
+    public CardLink? CardLink { get; set; }
     
     /// <summary>
     /// 卡片头部
@@ -67,5 +67,5 @@ public class Card
     /// </summary>
     [JsonPropertyName("fallback")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public object? Fallback { get; set; }
+    public Fallback? Fallback { get; set; }
 }

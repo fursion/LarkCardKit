@@ -2,17 +2,44 @@ using System.Text.Json.Serialization;
 
 namespace LarkCardKit.Models.Elements;
 
-/// <summary>
-/// Markdown 文本元素
-/// </summary>
 public class Markdown : Element
 {
-    /// <inheritdoc/>
-    public override string Tag => "markdown";
+    public override string Tag => "lark_md";
     
-    /// <summary>
-    /// Markdown 内容，支持标准 Markdown 语法和部分 HTML 标签
-    /// </summary>
     [JsonPropertyName("content")]
     public string Content { get; set; } = string.Empty;
+    
+    [JsonPropertyName("text_size")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? TextSize { get; set; }
+    
+    [JsonPropertyName("text_color")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? TextColor { get; set; }
+    
+    [JsonPropertyName("text_align")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? TextAlign { get; set; }
+    
+    [JsonPropertyName("icon")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public MarkdownIcon? Icon { get; set; }
+}
+
+public class MarkdownIcon
+{
+    [JsonPropertyName("tag")]
+    public string Tag { get; set; } = "standard_icon";
+    
+    [JsonPropertyName("token")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Token { get; set; }
+    
+    [JsonPropertyName("color")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Color { get; set; }
+    
+    [JsonPropertyName("img_key")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? ImgKey { get; set; }
 }

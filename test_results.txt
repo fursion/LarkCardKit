@@ -1,0 +1,475 @@
+鐢熸垚鍚姩鏃堕棿涓?2026/3/7 21:19:03銆?
+C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\bin\Debug\net10.0\LarkCardKit.Tests.dll (.NETCoreApp,Version=v10.0)鐨勬祴璇曡繍琛?
+VSTest 鐗堟湰 18.0.1 (x64)
+
+姝ｅ湪鍚姩娴嬭瘯鎵ц锛岃绋嶅€?..
+鎬诲叡 1 涓祴璇曟枃浠朵笌鎸囧畾妯″紡鐩稿尮閰嶃€?
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.3)
+[xUnit.net 00:00:00.07]   Discovering: LarkCardKit.Tests
+[xUnit.net 00:00:00.12]   Discovered:  LarkCardKit.Tests
+[xUnit.net 00:00:00.14]   Starting:    LarkCardKit.Tests
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.Options_WithSelector_ShouldAddOptions [8 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_TopLevelElement_ShouldFindElement [8 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_InDiv_ShouldModifySuccessfully [9 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_MultipleElements_ShouldReplaceCorrectOne [9 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.Options_WithSelector_ShouldAddOptions [8 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_NonExistentElement_ShouldReturnNull [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_Generic_WrongType_ShouldReturnFalse [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithMultiplePlaceholders_ShouldReplaceAll [12 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_ComplexObject_InTemplate [13 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.MixedOptionMethods_ShouldWorkTogether [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_InDiv_ShouldFindElement [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_EmptyStringDefault_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_NullableValue_ShouldHandleNull [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.MultipleAddOptionCalls_ShouldAccumulateOptions [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.ImplicitConversion_ShouldWorkWithTuple [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_MultipleProperties_ShouldModifyAll [2 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.AddOption_WithStringParameters_ShouldAddOption [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_ExistingElement_ShouldModifySuccessfully [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.AddOption_WithSelectOptionInfo_ShouldAddOption [4 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_InColumnSet_ShouldReplaceSuccessfully [4 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_EmptyCard_ShouldReturnFalse [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.TryFindElementById_ExistingElement_ShouldReturnTrue [2 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_WithSelect_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_InCheckbox_ShouldFindElement [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_Generic_ShouldReturnTypedValue [4 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_NestedStructure_ShouldModifySuccessfully [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.OnChange_ShouldAddBehavior [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithEmptyInput_ShouldReturnEmpty [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_NonExistentElement_ShouldReturnFalse [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_DictionaryValue_ShouldWork [3 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.Options_WithValueAndTextSelectors_ShouldAddOptions [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_Generic_WrongType_ShouldReturnNull [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_NestedStructure_ShouldReplaceSuccessfully [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.MultipleAddOptionCalls_ShouldAccumulateOptions [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_NonExistentElement_ShouldReturnFalse [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.InitialSelected_ShouldSetSelectedValues [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_MultipleMatches_ShouldReturnFirst [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_WithNestedProperty_ShouldReturnNestedValue [2 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.OnChange_ShouldAddBehavior [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.AddOptions_WithIEnumerable_ShouldAddMultipleOptions [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithNoPlaceholders_ShouldReturnOriginal [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.TryModifyElement_ShouldWorkSameAsModifyElement [2 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.EmptyOptions_ShouldBeNull [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.InitialSelected_WithNoOptions_ShouldStillSetValues [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.AddOption_WithCheckboxOptionInfo_ShouldAddOption [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.MixedOptionMethods_ShouldWorkTogether [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_WithNonExistentNestedProperty_ShouldReturnNull [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.EmptyOptions_ShouldBeNull [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_Generic_ShouldModifyTypedElement [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_EmptyCard_ShouldReturnFalse [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.SetParameters_WithDictionary_ShouldSetAllEntries [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.CardBuilder_SetParameters_Dictionary_ShouldWork [2 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.AddOptions_WithIEnumerable_ShouldAddMultipleOptions [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_TypeConversion_IntToString [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithValueAndDefault_ShouldUseValue [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_WithDatePicker_ShouldWork [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithDefaultValue_ShouldUseDefault [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.OptionsFrom_ShouldSetTemplateKey [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_ComplexNestedStructure_ShouldFindElement [2 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_AfterBuild_ShouldStillModify [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_WithDifferentType_ShouldReplaceSuccessfully [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.AddOption_WithStringParameters_ShouldAddOption [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.CardBuilder_SetParameter_WithEnum_ShouldWork [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.BasicProperties_ShouldBeSetCorrectly [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_ListValue_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_Generic_ShouldReturnTypedElement [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_TypeConversion_StringToBool [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_DatePicker_ShouldModifySuccessfully [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_ComplexTemplate_ShouldReplaceAllPlaceholders [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CheckboxBuilderTests.Options_WithValueAndTextSelectors_ShouldAddOptions [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_Generic_WithStringConversion_ShouldConvert [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_InForm_ShouldFindElement [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_InForm_ShouldModifySuccessfully [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_EmptyCard_ShouldReturnNull [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithKeepUnmatchedOption_ShouldKeepPlaceholder [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.SelectBuilderTests.BasicProperties_ShouldBeSetCorrectly [3 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementModifierTests.ModifyElement_InColumnSet_ShouldModifySuccessfully [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.HasParameter_NonExistentParameter_ShouldReturnFalse [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_InColumnSet_ShouldFindElement [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithUnmatchedPlaceholder_ShouldRemoveByDefault [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_InDatePicker_ShouldFindElement [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.TryFindElementById_NonExistentElement_ShouldReturnFalse [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementFinderTests.FindElementById_NestedDiv_ShouldFindElement [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_DecimalConversion_ShouldWork [4 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_Generic_WithEnumConversion_ShouldConvert [2 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_Generic_WithBoolStringConversion_ShouldConvert [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithSinglePlaceholder_ShouldReplace [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.SetParameters_WithNullObject_ShouldNotThrow [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.HasParameter_ExistingParameter_ShouldReturnTrue [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.SetParameters_WithObject_ShouldSetAllProperties [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.SetParameter_ShouldOverwriteExistingValue [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.Clear_ShouldRemoveAllParameters [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_WithNonExistentKey_ShouldReturnNull [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.GetValue_Generic_WithNonExistentKey_ShouldReturnDefault [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithNullInput_ShouldReturnEmpty [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_WithNestedPlaceholder_ShouldReplace [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.TemplateParameterFillerTests.FillString_MixedWithDefaults_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_TypeConversion_DateTimeToString [6 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_DoubleConversion_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_ComplexObject_NestedAccess [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateValue_WithDefault_ShouldSetDefault [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_TypeConversion_StringToInt [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_SpecialCharactersInDefault_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.CardBuilder_SetParameter_WithComplexObject_ShouldWork [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.CardBuilder_SetParameters_Object_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_TypeConversion_IntToEnum [1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.CardBuilder_SetParameter_WithBool_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateValue_EnumValue_ShouldConvertCorrectly [< 1 ms]
+[xUnit.net 00:00:00.79]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:00.79]     LarkCardKit.Tests.TemplateSendTests.SendTemplateWithAnonymousObject_ShouldSucceed [FAIL]
+[xUnit.net 00:00:00.79]       Stack Trace:
+[xUnit.net 00:00:00.79]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:00.79]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:00.79]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:00.79]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs(91,0): at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithAnonymousObject_ShouldSucceed()
+[xUnit.net 00:00:00.79]         --- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_TypeConversion_StringToEnum [8 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateParameterFiller_TypeConversion_BoolToString [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.ConfigObjectTemplateTests.TemplateValue_ImplicitConversionFromString_ShouldWork [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_ComplexNestedInMultipleContainers_ShouldWork [68 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.TryReplaceElement_ShouldWorkSameAsReplaceElement [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_InDiv_ShouldReplaceSuccessfully [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_InForm_ShouldReplaceSuccessfully [< 1 ms]
+  宸查€氳繃 LarkCardKit.Tests.CardBuilderElementReplacerTests.ReplaceElement_TopLevelElement_ShouldReplaceSuccessfully [< 1 ms]
+  澶辫触 LarkCardKit.Tests.TemplateSendTests.SendTemplateWithAnonymousObject_ShouldSucceed [278 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithAnonymousObject_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs:line 91
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:00.84]     LarkCardKit.Tests.ElementSendTests.SendImageCard_ShouldSucceed [FAIL]
+[xUnit.net 00:00:00.84]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:00.84]       Stack Trace:
+[xUnit.net 00:00:00.84]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:00.84]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:00.84]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:00.84]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs(58,0): at LarkCardKit.Tests.ElementSendTests.SendImageCard_ShouldSucceed()
+[xUnit.net 00:00:00.84]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:00.90]     LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithReplace_ShouldSucceed [FAIL]
+[xUnit.net 00:00:00.90]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:00.90]       Stack Trace:
+[xUnit.net 00:00:00.90]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:00.90]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:00.90]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:00.90]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ComplexScenarioSendTests.cs(141,0): at LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithReplace_ShouldSucceed()
+[xUnit.net 00:00:00.90]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:01.23]     LarkCardKit.Tests.ElementSendTests.SendPlainTextCard_ShouldSucceed [FAIL]
+[xUnit.net 00:00:01.23]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:01.23]       Stack Trace:
+[xUnit.net 00:00:01.23]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:01.23]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:01.23]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:01.23]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs(19,0): at LarkCardKit.Tests.ElementSendTests.SendPlainTextCard_ShouldSucceed()
+[xUnit.net 00:00:01.23]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:01.27]     LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithFindAndModify_ShouldSucceed [FAIL]
+[xUnit.net 00:00:01.27]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:01.27]       Stack Trace:
+[xUnit.net 00:00:01.27]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:01.27]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:01.27]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:01.27]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ComplexScenarioSendTests.cs(112,0): at LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithFindAndModify_ShouldSucceed()
+[xUnit.net 00:00:01.27]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:01.33]     LarkCardKit.Tests.TemplateSendTests.SendConfigObjectTemplate_ShouldSucceed [FAIL]
+[xUnit.net 00:00:01.33]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:01.33]       Stack Trace:
+[xUnit.net 00:00:01.33]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:01.33]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:01.33]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:01.33]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs(142,0): at LarkCardKit.Tests.TemplateSendTests.SendConfigObjectTemplate_ShouldSucceed()
+[xUnit.net 00:00:01.33]         --- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.ElementSendTests.SendImageCard_ShouldSucceed [283 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.ElementSendTests.SendImageCard_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs:line 58
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithReplace_ShouldSucceed [376 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithReplace_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ComplexScenarioSendTests.cs:line 141
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.ElementSendTests.SendPlainTextCard_ShouldSucceed [270 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.ElementSendTests.SendPlainTextCard_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs:line 19
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithFindAndModify_ShouldSucceed [251 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithFindAndModify_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ComplexScenarioSendTests.cs:line 112
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.TemplateSendTests.SendConfigObjectTemplate_ShouldSucceed [418 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.TemplateSendTests.SendConfigObjectTemplate_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs:line 142
+--- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.LayoutSendTests.SendColumnSetThreeColumns_ShouldSucceed [1 s]
+[xUnit.net 00:00:01.62]     LarkCardKit.Tests.ElementSendTests.SendMixedElements_ShouldSucceed [FAIL]
+[xUnit.net 00:00:01.62]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:01.62]       Stack Trace:
+[xUnit.net 00:00:01.62]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:01.62]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:01.62]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:01.62]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs(96,0): at LarkCardKit.Tests.ElementSendTests.SendMixedElements_ShouldSucceed()
+[xUnit.net 00:00:01.62]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:01.66]     LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithAllNewFeatures_ShouldSucceed [FAIL]
+[xUnit.net 00:00:01.66]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:01.66]       Stack Trace:
+[xUnit.net 00:00:01.66]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:01.66]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:01.66]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:01.66]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ComplexScenarioSendTests.cs(230,0): at LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithAllNewFeatures_ShouldSucceed()
+[xUnit.net 00:00:01.66]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:01.69]     LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDefaultValue_ShouldSucceed [FAIL]
+[xUnit.net 00:00:01.69]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:01.69]       Stack Trace:
+[xUnit.net 00:00:01.69]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:01.69]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:01.69]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:01.69]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs(67,0): at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDefaultValue_ShouldSucceed()
+[xUnit.net 00:00:01.69]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.13]     LarkCardKit.Tests.TemplateSendTests.SendTemplateParameterFill_ShouldSucceed [FAIL]
+[xUnit.net 00:00:02.13]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:02.13]       Stack Trace:
+[xUnit.net 00:00:02.13]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:02.13]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:02.13]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:02.13]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs(28,0): at LarkCardKit.Tests.TemplateSendTests.SendTemplateParameterFill_ShouldSucceed()
+[xUnit.net 00:00:02.13]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.46]     LarkCardKit.Tests.TemplateSendTests.SendTemplateWithObjectParameters_ShouldSucceed [FAIL]
+[xUnit.net 00:00:02.46]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:02.46]       Stack Trace:
+[xUnit.net 00:00:02.46]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:02.46]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:02.46]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:02.46]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs(48,0): at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithObjectParameters_ShouldSucceed()
+[xUnit.net 00:00:02.46]         --- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.ElementSendTests.SendMixedElements_ShouldSucceed [276 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.ElementSendTests.SendMixedElements_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs:line 96
+--- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.InteractiveSendTests.SendSelectWithOptionsInfo_ShouldSucceed [1 s]
+  澶辫触 LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithAllNewFeatures_ShouldSucceed [266 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.ComplexScenarioSendTests.SendCardWithAllNewFeatures_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ComplexScenarioSendTests.cs:line 230
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDefaultValue_ShouldSucceed [253 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDefaultValue_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs:line 67
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.TemplateSendTests.SendTemplateParameterFill_ShouldSucceed [328 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.TemplateSendTests.SendTemplateParameterFill_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs:line 28
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.TemplateSendTests.SendTemplateWithObjectParameters_ShouldSucceed [211 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithObjectParameters_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs:line 48
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:02.91]     LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDictionary_ShouldSucceed [FAIL]
+[xUnit.net 00:00:02.91]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:02.91]       Stack Trace:
+[xUnit.net 00:00:02.91]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:02.91]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:02.91]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:02.91]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs(117,0): at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDictionary_ShouldSucceed()
+[xUnit.net 00:00:02.91]         --- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.LayoutSendTests.SendFormContainer_ShouldSucceed [1 s]
+  宸查€氳繃 LarkCardKit.Tests.InteractiveSendTests.SendDatePicker_ShouldSucceed [1 s]
+  澶辫触 LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDictionary_ShouldSucceed [336 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.TemplateSendTests.SendTemplateWithDictionary_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs:line 117
+--- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.ElementSendTests.SendMarkdownCard_ShouldSucceed [1 s]
+  宸查€氳繃 LarkCardKit.Tests.ComplexScenarioSendTests.SendComplexLayout_ShouldSucceed [1 s]
+[xUnit.net 00:00:03.09]     LarkCardKit.Tests.TemplateSendTests.SendOptionsFromTemplate_ShouldSucceed [FAIL]
+[xUnit.net 00:00:03.09]       System.InvalidCastException : Object must implement IConvertible.
+[xUnit.net 00:00:03.09]       Stack Trace:
+[xUnit.net 00:00:03.09]            at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Templates\TemplateParameterFiller.cs(133,0): at LarkCardKit.Templates.TemplateParameterFiller.ConvertValue[T](Object value)
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Templates\TemplateParameterFiller.cs(61,0): at LarkCardKit.Templates.TemplateParameterFiller.GetValue[T](String key)
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs(272,0): at LarkCardKit.Builders.CardBuilder.ApplyTemplateToSelect(Select select)
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs(187,0): at LarkCardKit.Builders.CardBuilder.ApplyTemplateToElement(Element element)
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs(350,0): at LarkCardKit.Builders.CardBuilder.ApplyTemplateToForm(Form form)
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs(203,0): at LarkCardKit.Builders.CardBuilder.ApplyTemplateToElement(Element element)
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs(160,0): at LarkCardKit.Builders.CardBuilder.ApplyTemplateParameters()
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs(391,0): at LarkCardKit.Builders.CardBuilder.Build()
+[xUnit.net 00:00:03.09]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs(160,0): at LarkCardKit.Tests.TemplateSendTests.SendOptionsFromTemplate_ShouldSucceed()
+[xUnit.net 00:00:03.09]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:03.17]     LarkCardKit.Tests.LayoutSendTests.SendColumnSetTwoColumns_ShouldSucceed [FAIL]
+[xUnit.net 00:00:03.17]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:03.17]       Stack Trace:
+[xUnit.net 00:00:03.17]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:03.17]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:03.17]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:03.17]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LayoutSendTests.cs(64,0): at LarkCardKit.Tests.LayoutSendTests.SendColumnSetTwoColumns_ShouldSucceed()
+[xUnit.net 00:00:03.17]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:03.32]     LarkCardKit.Tests.ElementSendTests.SendMultiplePlainTextElements_ShouldSucceed [FAIL]
+[xUnit.net 00:00:03.32]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:03.32]       Stack Trace:
+[xUnit.net 00:00:03.32]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:03.32]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:03.32]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:03.32]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs(77,0): at LarkCardKit.Tests.ElementSendTests.SendMultiplePlainTextElements_ShouldSucceed()
+[xUnit.net 00:00:03.32]         --- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.TemplateSendTests.SendOptionsFromTemplate_ShouldSucceed [< 1 ms]
+  閿欒娑堟伅:
+   System.InvalidCastException : Object must implement IConvertible.
+  鍫嗘爤璺熻釜:
+     at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at LarkCardKit.Templates.TemplateParameterFiller.ConvertValue[T](Object value) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Templates\TemplateParameterFiller.cs:line 133
+   at LarkCardKit.Templates.TemplateParameterFiller.GetValue[T](String key) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Templates\TemplateParameterFiller.cs:line 61
+   at LarkCardKit.Builders.CardBuilder.ApplyTemplateToSelect(Select select) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs:line 272
+   at LarkCardKit.Builders.CardBuilder.ApplyTemplateToElement(Element element) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs:line 187
+   at LarkCardKit.Builders.CardBuilder.ApplyTemplateToForm(Form form) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs:line 350
+   at LarkCardKit.Builders.CardBuilder.ApplyTemplateToElement(Element element) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs:line 203
+   at LarkCardKit.Builders.CardBuilder.ApplyTemplateParameters() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs:line 160
+   at LarkCardKit.Builders.CardBuilder.Build() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit\Builders\CardBuilder.cs:line 391
+   at LarkCardKit.Tests.TemplateSendTests.SendOptionsFromTemplate_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\TemplateSendTests.cs:line 160
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.LayoutSendTests.SendColumnSetTwoColumns_ShouldSucceed [268 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.LayoutSendTests.SendColumnSetTwoColumns_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LayoutSendTests.cs:line 64
+--- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.ElementSendTests.SendMultiplePlainTextElements_ShouldSucceed [265 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.ElementSendTests.SendMultiplePlainTextElements_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\ElementSendTests.cs:line 77
+--- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.InteractiveSendTests.SendInput_ShouldSucceed [1 s]
+  宸查€氳繃 LarkCardKit.Tests.ComplexScenarioSendTests.SendNestedComponentOperations_ShouldSucceed [1 s]
+  宸查€氳繃 LarkCardKit.Tests.LayoutSendTests.SendDivContainer_ShouldSucceed [1 s]
+[xUnit.net 00:00:04.82]     LarkCardKit.Tests.LayoutSendTests.SendDivWithMarkdown_ShouldSucceed [FAIL]
+[xUnit.net 00:00:04.82]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:04.82]       Stack Trace:
+[xUnit.net 00:00:04.82]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:04.82]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:04.82]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:04.82]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LayoutSendTests.cs(40,0): at LarkCardKit.Tests.LayoutSendTests.SendDivWithMarkdown_ShouldSucceed()
+[xUnit.net 00:00:04.82]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:05.32]     LarkCardKit.Tests.LayoutSendTests.SendNestedLayout_ShouldSucceed [FAIL]
+[xUnit.net 00:00:05.32]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:05.32]       Stack Trace:
+[xUnit.net 00:00:05.32]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:05.32]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:05.32]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:05.32]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LayoutSendTests.cs(131,0): at LarkCardKit.Tests.LayoutSendTests.SendNestedLayout_ShouldSucceed()
+[xUnit.net 00:00:05.32]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:05.73]     LarkCardKit.Tests.InteractiveSendTests.SendMultiSelect_ShouldSucceed [FAIL]
+[xUnit.net 00:00:05.73]       LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+[xUnit.net 00:00:05.73]       Stack Trace:
+[xUnit.net 00:00:05.73]         C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs(60,0): at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken)
+[xUnit.net 00:00:05.73]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(129,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson)
+[xUnit.net 00:00:05.73]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs(140,0): at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card)
+[xUnit.net 00:00:05.73]         C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\InteractiveSendTests.cs(150,0): at LarkCardKit.Tests.InteractiveSendTests.SendMultiSelect_ShouldSucceed()
+[xUnit.net 00:00:05.73]         --- End of stack trace from previous location ---
+  澶辫触 LarkCardKit.Tests.LayoutSendTests.SendDivWithMarkdown_ShouldSucceed [253 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.LayoutSendTests.SendDivWithMarkdown_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LayoutSendTests.cs:line 40
+--- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.InteractiveSendTests.SendSelect_ShouldSucceed [1 s]
+  澶辫触 LarkCardKit.Tests.LayoutSendTests.SendNestedLayout_ShouldSucceed [336 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.LayoutSendTests.SendNestedLayout_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LayoutSendTests.cs:line 131
+--- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.ComplexScenarioSendTests.SendComplexForm_ShouldSucceed [1 s]
+  澶辫触 LarkCardKit.Tests.InteractiveSendTests.SendMultiSelect_ShouldSucceed [325 ms]
+  閿欒娑堟伅:
+   LarkKit.Core.Exception.LarkException : HTTP 閿欒锛欱adRequest
+  鍫嗘爤璺熻釜:
+     at LarkKit.Domains.Im.MessageResource.CreateAsync(MessageCreateRequest request, CancellationToken cancellationToken) in C:\Users\60435\Desktop\LarkCardKit\LarkKit\Domains\Im\Message\MessageResource.cs:line 60
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String cardJson) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 129
+   at LarkCardKit.Tests.IntegrationTestBase.SendCardAsync(String testName, Card card) in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\IntegrationTestBase.cs:line 140
+   at LarkCardKit.Tests.InteractiveSendTests.SendMultiSelect_ShouldSucceed() in C:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\InteractiveSendTests.cs:line 150
+--- End of stack trace from previous location ---
+  宸查€氳繃 LarkCardKit.Tests.InteractiveSendTests.SendButton_ShouldSucceed [1 s]
+  宸查€氳繃 LarkCardKit.Tests.InteractiveSendTests.SendCheckboxWithOptionsInfo_ShouldSucceed [1 s]
+[xUnit.net 00:00:09.36]   Finished:    LarkCardKit.Tests
+  宸查€氳繃 LarkCardKit.Tests.InteractiveSendTests.SendCheckbox_ShouldSucceed [1 s]
+
+娴嬭瘯鎬绘暟: 148
+娴嬭瘯杩愯澶辫触銆?
+     閫氳繃鏁? 130
+     澶辫触鏁? 18
+鎬绘椂闂? 9.7317 绉?
+     1>椤圭洰鈥淐:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LarkCardKit.Tests.csproj鈥濆湪鑺傜偣 1 涓?VSTest 涓洰鏍?銆?
+     1>_VSTestConsole:
+         MSB4181: 鈥淰STestTask鈥濅换鍔¤繑鍥炰簡 false锛屼絾鏈褰曢敊璇€?
+     1>宸插畬鎴愮敓鎴愰」鐩€淐:\Users\60435\Desktop\LarkCardKit\LarkCardKit.Tests\LarkCardKit.Tests.csproj鈥?VSTest 涓洰鏍?鐨勬搷浣?- 澶辫触銆?
+
+鐢熸垚澶辫触銆?
+    0 涓鍛?
+    0 涓敊璇?
+
+宸茬敤鏃堕棿 00:00:10.24

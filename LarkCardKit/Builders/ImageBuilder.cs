@@ -3,9 +3,6 @@ using LarkCardKit.Models.Elements;
 
 namespace LarkCardKit.Builders;
 
-/// <summary>
-/// 图片构建器
-/// </summary>
 public class ImageBuilder
 {
     private readonly Image _image;
@@ -13,6 +10,18 @@ public class ImageBuilder
     public ImageBuilder(string imgKey)
     {
         _image = new Image { ImgKey = imgKey };
+    }
+    
+    public ImageBuilder Title(string title)
+    {
+        _image.Title = new PlainText { Content = title };
+        return this;
+    }
+    
+    public ImageBuilder ScaleType(string scaleType)
+    {
+        _image.ScaleType = scaleType;
+        return this;
     }
     
     public ImageBuilder Size(ImageSize size)
@@ -28,15 +37,39 @@ public class ImageBuilder
         return this;
     }
     
-    public ImageBuilder Width(string width)
+    public ImageBuilder Size(string size)
     {
-        _image.Width = width;
+        _image.Size = size;
+        return this;
+    }
+    
+    public ImageBuilder CornerRadius(string cornerRadius)
+    {
+        _image.CornerRadius = cornerRadius;
+        return this;
+    }
+    
+    public ImageBuilder Transparent(bool transparent = true)
+    {
+        _image.Transparent = transparent;
+        return this;
+    }
+    
+    public ImageBuilder Preview(bool preview = true)
+    {
+        _image.Preview = preview;
         return this;
     }
     
     public ImageBuilder Alt(string alt)
     {
         _image.Alt = new PlainText { Content = alt };
+        return this;
+    }
+    
+    public ImageBuilder Width(string width)
+    {
+        _image.Width = width;
         return this;
     }
     
