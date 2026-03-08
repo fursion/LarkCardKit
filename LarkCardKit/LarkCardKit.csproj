@@ -4,10 +4,23 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <PackageId>LarkCardKit</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>fursion</Authors>
+    <Description>飞书卡片构建器 SDK - 基于飞书卡片 JSON 2.0 规范的 C# 函数式 UI 搭建 SDK。支持所有飞书卡片 2.0 组件，提供类型安全的链式 API。</Description>
+    <PackageTags>lark;feishu;card;builder;json;ui;sdk</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/fursion/LarkCardKit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/fursion/LarkCardKit</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
