@@ -4,15 +4,15 @@ using LarkCardKit.Models.Behaviors;
 namespace LarkCardKit.Models.Elements;
 
 /// <summary>
-/// 勾选器组件
+/// 多选下拉组件
 /// </summary>
 public class Checkbox : Element
 {
     /// <inheritdoc/>
-    public override string Tag => "checkbox";
+    public override string Tag => "multi_select_static";
     
     /// <summary>
-    /// 勾选器唯一标识，表单容器中必填
+    /// 组件唯一标识，表单容器中必填
     /// </summary>
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -26,6 +26,34 @@ public class Checkbox : Element
     public bool? Required { get; set; }
     
     /// <summary>
+    /// 是否禁用
+    /// </summary>
+    [JsonPropertyName("disabled")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool? Disabled { get; set; }
+    
+    /// <summary>
+    /// 占位文本
+    /// </summary>
+    [JsonPropertyName("placeholder")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? Placeholder { get; set; }
+    
+    /// <summary>
+    /// 组件宽度
+    /// </summary>
+    [JsonPropertyName("width")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Width { get; set; }
+    
+    /// <summary>
+    /// 组件边框样式
+    /// </summary>
+    [JsonPropertyName("type")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Type { get; set; }
+    
+    /// <summary>
     /// 选项列表
     /// </summary>
     [JsonPropertyName("options")]
@@ -35,9 +63,9 @@ public class Checkbox : Element
     /// <summary>
     /// 初始选中值
     /// </summary>
-    [JsonPropertyName("initial_selected_options")]
+    [JsonPropertyName("selected_values")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string>? InitialSelectedOptions { get; set; }
+    public List<string>? SelectedValues { get; set; }
     
     /// <summary>
     /// 交互行为列表
@@ -48,7 +76,7 @@ public class Checkbox : Element
 }
 
 /// <summary>
-/// 勾选器选项
+/// 多选下拉选项
 /// </summary>
 public class CheckboxOption
 {

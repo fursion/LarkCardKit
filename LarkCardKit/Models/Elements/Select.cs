@@ -9,7 +9,7 @@ namespace LarkCardKit.Models.Elements;
 public class Select : Element
 {
     /// <inheritdoc/>
-    public override string Tag => "select";
+    public override string Tag => MultiSelect == true ? "multi_select_static" : "select_static";
     
     /// <summary>
     /// 选择器唯一标识，表单容器中必填
@@ -26,10 +26,8 @@ public class Select : Element
     public bool? Required { get; set; }
     
     /// <summary>
-    /// 是否多选
-    /// </summary>
-    [JsonPropertyName("multi_select")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    /// 是否多选（内部使用，用于确定 Tag，    /// </summary>
+    [JsonIgnore]
     public bool? MultiSelect { get; set; }
     
     /// <summary>
@@ -38,13 +36,6 @@ public class Select : Element
     [JsonPropertyName("placeholder")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Placeholder { get; set; }
-    
-    /// <summary>
-    /// 文本标签
-    /// </summary>
-    [JsonPropertyName("label")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public PlainText? Label { get; set; }
     
     /// <summary>
     /// 初始选项
@@ -59,6 +50,13 @@ public class Select : Element
     [JsonPropertyName("options")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<SelectOption>? Options { get; set; }
+    
+    /// <summary>
+    /// 选项模板键（用于从模板参数获取选项列表）
+    /// 内部使用，不序列化到 JSON
+    /// </summary>
+    [JsonIgnore]
+    public string? OptionsTemplateKey { get; set; }
     
     /// <summary>
     /// 选择器宽度

@@ -1,47 +1,55 @@
 using System.Text.Json.Serialization;
+using LarkCardKit.Models;
 
 namespace LarkCardKit.Config;
 
-/// <summary>
-/// 卡片配置类
-/// </summary>
 public class CardConfig
 {
-    /// <summary>
-    /// 是否为共享卡片，默认为 true
-    /// </summary>
     [JsonPropertyName("update_multi")]
     public bool UpdateMulti { get; set; } = true;
-    
-    /// <summary>
-    /// 是否启用流式更新模式，默认为 false
-    /// </summary>
+
     [JsonPropertyName("streaming_mode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? StreamingMode { get; set; }
-    
-    /// <summary>
-    /// 流式更新的摘要信息
-    /// </summary>
+
+    [JsonPropertyName("streaming_config")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public StreamingConfig? StreamingConfig { get; set; }
+
     [JsonPropertyName("summary")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public StreamingSummary? Summary { get; set; }
+
+    [JsonPropertyName("locales")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string[]? Locales { get; set; }
+
+    [JsonPropertyName("enable_forward")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool? EnableForward { get; set; }
+
+    [JsonPropertyName("width_mode")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? WidthMode { get; set; }
+
+    [JsonPropertyName("use_custom_translation")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool? UseCustomTranslation { get; set; }
+
+    [JsonPropertyName("enable_forward_interaction")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool? EnableForwardInteraction { get; set; }
+
+    [JsonPropertyName("style")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public CardStyle? Style { get; set; }
 }
 
-/// <summary>
-/// 流式更新摘要配置
-/// </summary>
 public class StreamingSummary
 {
-    /// <summary>
-    /// 自定义摘要内容
-    /// </summary>
     [JsonPropertyName("content")]
     public string Content { get; set; } = "生成中";
-    
-    /// <summary>
-    /// 摘要的多语言配置
-    /// </summary>
+
     [JsonPropertyName("i18n_content")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, string>? I18nContent { get; set; }

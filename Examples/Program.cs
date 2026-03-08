@@ -1,8 +1,55 @@
 using LarkCardKit.Builders;
 using LarkCardKit.Enums;
+using LarkCardKit.Examples;
 
-// 示例 1：简单的按钮卡片（紧凑格式）
-Console.WriteLine("=== 示例 1：简单按钮卡片（紧凑格式） ===");
+Console.WriteLine("╔════════════════════════════════════════════════════════════╗");
+Console.WriteLine("║           飞书卡片 SDK (LarkCardKit) 示例程序               ║");
+Console.WriteLine("╚════════════════════════════════════════════════════════════╝");
+Console.WriteLine();
+
+Console.WriteLine("请选择要运行的示例：");
+Console.WriteLine("  1. 基础卡片示例");
+Console.WriteLine("  2. 对象参数配置选项示例");
+Console.WriteLine("  3. 组件查找、修改、替换示例");
+Console.WriteLine("  4. 模板参数填充示例");
+Console.WriteLine("  0. 运行所有示例");
+Console.WriteLine();
+Console.Write("请输入选项 (0-4): ");
+
+var choice = Console.ReadLine();
+Console.WriteLine();
+
+switch (choice)
+{
+    case "1":
+        RunBasicExamples();
+        break;
+    case "2":
+        OptionConfigurationExample.Run();
+        break;
+    case "3":
+        ElementOperationsExample.Run();
+        break;
+    case "4":
+        TemplateParameterExample.Run();
+        break;
+    case "0":
+    default:
+        RunBasicExamples();
+        OptionConfigurationExample.Run();
+        ElementOperationsExample.Run();
+        TemplateParameterExample.Run();
+        break;
+}
+
+Console.WriteLine();
+Console.WriteLine("✅ 示例运行完成！");
+return;
+
+static void RunBasicExamples()
+{
+    // 示例 1：简单的按钮卡片（紧凑格式）
+    Console.WriteLine("=== 示例 1：简单按钮卡片（紧凑格式） ===");
 var simpleCard = CardBuilder.Create()
     .Header(h => h.Title("欢迎使用飞书卡片 SDK"))
     .Body(b => b
@@ -65,7 +112,6 @@ var formCard = CardBuilder.Create()
                 .Type(InputType.Text))
             .Select(s => s
                 .Name("department")
-                .Label("部门：")
                 .Placeholder("请选择部门")
                 .AddOption("tech", "技术部")
                 .AddOption("sales", "销售部")
@@ -136,9 +182,8 @@ var columnCardIndented = CardBuilder.Create()
 Console.WriteLine(columnCardIndented);
 Console.WriteLine();
 
-Console.WriteLine("✅ 所有示例生成成功！");
-Console.WriteLine();
 Console.WriteLine("💡 提示：");
 Console.WriteLine("  - 使用 .ToJson() 输出紧凑格式（默认）");
 Console.WriteLine("  - 使用 .ToJson(true) 输出格式化格式（带缩进和换行）");
 Console.WriteLine("  - 中文字符现在会直接显示，不会被转义为 Unicode 编码");
+}
