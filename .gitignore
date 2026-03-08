@@ -301,6 +301,7 @@ appsettings.Local.json
 
 # 环境变量文件
 .env
+.env.*
 .env.local
 .env.*.local
 
