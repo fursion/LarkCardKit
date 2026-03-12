@@ -4,7 +4,7 @@ namespace LarkCardKit.Models.Elements;
 
 public class Markdown : Element
 {
-    public override string Tag => "lark_md";
+    public override string Tag => "markdown";
     
     [JsonPropertyName("content")]
     public string Content { get; set; } = string.Empty;

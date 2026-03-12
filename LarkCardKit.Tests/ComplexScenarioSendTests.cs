@@ -16,7 +16,7 @@ public class ComplexScenarioSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("用户信息收集表单"))
+            .Header(h => h.Title("用户信息收集表单").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Div(div => div.Text("请填写以下信息："))
                 .Form(form => form
@@ -58,7 +58,7 @@ public class ComplexScenarioSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("复杂布局示例"))
+            .Header(h => h.Title("复杂布局示例").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .ColumnSet(cs => cs
                     .AddColumn(col => col
@@ -92,7 +92,7 @@ public class ComplexScenarioSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var builder = CardBuilder.Create()
-            .Header(h => h.Title("查找修改测试"))
+            .Header(h => h.Title("查找修改测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("原始文本")
                 .Button(btn => btn
@@ -121,7 +121,7 @@ public class ComplexScenarioSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var builder = CardBuilder.Create()
-            .Header(h => h.Title("替换测试"))
+            .Header(h => h.Title("替换测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("这段文本将被保留")
                 .Button(btn => btn
@@ -150,7 +150,7 @@ public class ComplexScenarioSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var builder = CardBuilder.Create()
-            .Header(h => h.Title("嵌套组件操作测试"))
+            .Header(h => h.Title("嵌套组件操作测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("nestedForm")
@@ -191,7 +191,7 @@ public class ComplexScenarioSendTests : IntegrationTestBase
         };
         
         var builder = CardBuilder.Create()
-            .Header(h => h.Title("全部新功能测试 - ${title}"))
+            .Header(h => h.Title("全部新功能测试 - ${title}").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("测试对象参数配置选项：")
                 .Form(form => form

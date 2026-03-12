@@ -13,7 +13,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("PickerDatetime 日期时间选择器测试"))
+            .Header(h => h.Title("PickerDatetime 日期时间选择器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PickerDatetime(pd => pd
                     .Placeholder("请选择日期时间")
@@ -32,7 +32,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("表单中的日期时间选择器"))
+            .Header(h => h.Title("表单中的日期时间选择器").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("datetimeForm")
@@ -57,7 +57,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Overflow 折叠按钮组测试"))
+            .Header(h => h.Title("Overflow 折叠按钮组测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("点击查看更多操作：")
                 .Overflow(overflow => overflow
@@ -78,7 +78,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("带回调的折叠按钮组"))
+            .Header(h => h.Title("带回调的折叠按钮组").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Overflow(overflow => overflow
                     .AddOption("option1", "选项一")
@@ -187,7 +187,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("SelectPerson 人员选择器测试"))
+            .Header(h => h.Title("SelectPerson 人员选择器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("personForm")
@@ -211,7 +211,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("带初始值的人员选择器"))
+            .Header(h => h.Title("带初始值的人员选择器").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("personForm2")
@@ -237,7 +237,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("MultiSelectPerson 多选人员测试"))
+            .Header(h => h.Title("MultiSelectPerson 多选人员测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("multiPersonForm")
@@ -288,7 +288,7 @@ public class MoreComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Checker 勾选器测试"))
+            .Header(h => h.Title("Checker 勾选器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Checker(c => c
                     .Name("task1")

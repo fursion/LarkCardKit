@@ -19,6 +19,13 @@ public class SelectPerson : Element
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Placeholder { get; set; }
     
+    /// <summary>
+    /// 文本标签
+    /// </summary>
+    [JsonPropertyName("label")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? Label { get; set; }
+    
     [JsonPropertyName("initial_option")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? InitialOption { get; set; }

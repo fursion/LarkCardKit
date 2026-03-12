@@ -219,8 +219,8 @@ public class CardBuilder
                 ApplyTemplateToPickerDatetime(pickerDatetime);
                 break;
                 
-            case Div div:
-                ApplyTemplateToDiv(div);
+            case TextDiv textDiv:
+                ApplyTemplateToTextDiv(textDiv);
                 break;
                 
             case Form form:
@@ -419,19 +419,11 @@ public class CardBuilder
         }
     }
     
-    private void ApplyTemplateToDiv(Div div)
+    private void ApplyTemplateToTextDiv(TextDiv textDiv)
     {
-        if (div.Text != null)
+        if (textDiv.Text != null)
         {
-            ApplyTemplateToElement(div.Text);
-        }
-        
-        if (div.Elements != null)
-        {
-            foreach (var child in div.Elements)
-            {
-                ApplyTemplateToElement(child);
-            }
+            ApplyTemplateToElement(textDiv.Text);
         }
     }
     
@@ -635,7 +627,7 @@ public class CardBuilder
             
             var replaced = elements[i] switch
             {
-                Div div => ReplaceInDiv(div, elementId, newElement),
+                TextDiv textDiv => ReplaceInTextDiv(textDiv, elementId, newElement),
                 Form form => ReplaceInForm(form, elementId, newElement),
                 ColumnSet columnSet => ReplaceInColumnSet(columnSet, elementId, newElement),
                 _ => false
@@ -648,19 +640,12 @@ public class CardBuilder
         return false;
     }
     
-    private bool ReplaceInDiv(Div div, string elementId, Element newElement)
+    private bool ReplaceInTextDiv(TextDiv textDiv, string elementId, Element newElement)
     {
-        if (div.Text != null && div.Text.ElementId == elementId)
+        if (textDiv.Text != null && textDiv.Text.ElementId == elementId)
         {
-            div.Text = newElement as PlainText ?? 
-                       newElement as Markdown ?? 
-                       div.Text;
+            textDiv.Text = newElement as PlainText ?? textDiv.Text;
             return true;
-        }
-        
-        if (div.Elements != null && div.Elements.Count > 0)
-        {
-            return ReplaceElementRecursive(div.Elements, elementId, newElement);
         }
         
         return false;
@@ -890,7 +875,7 @@ public class CardHeaderBuilder
     private readonly CardHeader _header = new();
     
     /// <summary>
-    /// 设置卡片标题
+    /// 设置卡片标题（简单字符串，默认使用 plain_text）
     /// </summary>
     /// <param name="title">标题文本内容</param>
     /// <returns>当前头部构建器实例（支持链式调用）</returns>
@@ -908,13 +893,52 @@ public class CardHeaderBuilder
     }
     
     /// <summary>
-    /// 设置卡片副标题
+    /// 设置卡片标题（使用 TextBuilder 配置）
+    /// </summary>
+    /// <param name="configure">文本构建器配置</param>
+    /// <returns>当前头部构建器实例（支持链式调用）</returns>
+    /// <example>
+    /// <code>
+    /// // 普通文本标题
+    /// var header = new CardHeaderBuilder()
+    ///     .Title(builder => builder.Tag("plain_text").Content("普通文本标题"))
+    ///     .Build();
+    /// 
+    /// // Markdown 标题
+    /// var header = new CardHeaderBuilder()
+    ///     .Title(builder => builder.AsMarkdown().Content("**Markdown** 标题"))
+    ///     .Build();
+    /// </code>
+    /// </example>
+    public CardHeaderBuilder Title(Action<TextBuilder> configure)
+    {
+        var builder = new TextBuilder();
+        configure(builder);
+        _header.Title = builder.Build();
+        return this;
+    }
+    
+    /// <summary>
+    /// 设置卡片副标题（简单字符串，默认使用 plain_text）
     /// </summary>
     /// <param name="subtitle">副标题文本内容</param>
     /// <returns>当前头部构建器实例（支持链式调用）</returns>
     public CardHeaderBuilder Subtitle(string subtitle)
     {
         _header.Subtitle = new Models.Elements.PlainText { Content = subtitle };
+        return this;
+    }
+    
+    /// <summary>
+    /// 设置卡片副标题（使用 TextBuilder 配置）
+    /// </summary>
+    /// <param name="configure">文本构建器配置</param>
+    /// <returns>当前头部构建器实例（支持链式调用）</returns>
+    public CardHeaderBuilder Subtitle(Action<TextBuilder> configure)
+    {
+        var builder = new TextBuilder();
+        configure(builder);
+        _header.Subtitle = builder.Build();
         return this;
     }
     
@@ -1076,23 +1100,24 @@ public class CardBodyBuilder
     }
     
     /// <summary>
-    /// 添加容器元素
+    /// 添加 Div（普通文本）元素到卡片主体
     /// </summary>
-    /// <param name="configure">容器构建器的配置动作</param>
+    /// <param name="configure">Div 构建器配置</param>
     /// <returns>当前主体构建器实例（支持链式调用）</returns>
+    /// <remarks>
+    /// Div 是飞书卡片 2.0 中的普通文本展示组件，用于展示纯文本或 Markdown 内容。
+    /// </remarks>
     /// <example>
     /// <code>
     /// var card = CardBuilder.Create()
     ///     .Body(b => b
-    ///         .Div(d => d
-    ///             .Vertical()
-    ///             .PlainText("内容")))
+    ///         .Div(d => d.Text("这是普通文本内容")))
     ///     .Build();
     /// </code>
     /// </example>
-    public CardBodyBuilder Div(Action<DivBuilder> configure)
+    public CardBodyBuilder Div(Action<PlainTextElementBuilder> configure)
     {
-        var builder = new DivBuilder();
+        var builder = new PlainTextElementBuilder();
         configure(builder);
         _body.Elements.Add(builder.Build());
         return this;
@@ -1258,7 +1283,7 @@ public class CardBodyBuilder
     /// </example>
     public CardBodyBuilder PlainText(string content)
     {
-        _body.Elements.Add(new Models.Elements.Div
+        _body.Elements.Add(new Models.Elements.TextDiv
         {
             Text = new Models.Elements.PlainText { Content = content }
         });
@@ -1269,7 +1294,7 @@ public class CardBodyBuilder
     {
         var builder = new PlainTextBuilder().Content(content);
         configure(builder);
-        _body.Elements.Add(new Models.Elements.Div
+        _body.Elements.Add(new Models.Elements.TextDiv
         {
             Text = builder.Build()
         });
@@ -1291,9 +1316,9 @@ public class CardBodyBuilder
     /// </example>
     public CardBodyBuilder Markdown(string content)
     {
-        _body.Elements.Add(new Models.Elements.Div
+        _body.Elements.Add(new Models.Elements.Markdown
         {
-            Text = new Models.Elements.Markdown { Content = content }
+            Content = content
         });
         return this;
     }
@@ -1302,10 +1327,7 @@ public class CardBodyBuilder
     {
         var builder = new MarkdownBuilder().Content(content);
         configure(builder);
-        _body.Elements.Add(new Models.Elements.Div
-        {
-            Text = builder.Build()
-        });
+        _body.Elements.Add(builder.Build());
         return this;
     }
     

@@ -28,11 +28,11 @@ public class TextTag
     public string? ElementId { get; set; }
     
     /// <summary>
-    /// 标签文本内容
+    /// 标签文本内容（支持 plain_text 和 lark_md 两种模式）
     /// </summary>
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public PlainText? Text { get; set; }
+    public Element? Text { get; set; }
     
     /// <summary>
     /// 标签颜色

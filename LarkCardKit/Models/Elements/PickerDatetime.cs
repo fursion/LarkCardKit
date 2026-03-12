@@ -19,6 +19,13 @@ public class PickerDatetime : Element
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Placeholder { get; set; }
     
+    /// <summary>
+    /// 文本标签
+    /// </summary>
+    [JsonPropertyName("label")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? Label { get; set; }
+    
     [JsonPropertyName("initial_datetime")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? InitialDatetime { get; set; }

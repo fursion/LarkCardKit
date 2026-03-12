@@ -12,7 +12,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("分割线测试"))
+            .Header(h => h.Title("分割线测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("内容上方")
                 .Hr()
@@ -31,7 +31,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("带边距的分割线测试"))
+            .Header(h => h.Title("带边距的分割线测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("内容上方")
                 .Hr(hr => hr.Margin("16px 0"))
@@ -50,7 +50,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("时间选择器测试"))
+            .Header(h => h.Title("时间选择器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PickerTime(pt => pt
                     .Placeholder("请选择时间")
@@ -69,7 +69,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("表单中的时间选择器"))
+            .Header(h => h.Title("表单中的时间选择器").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("timeForm")
@@ -97,7 +97,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("综合测试：分割线 + 时间选择器"))
+            .Header(h => h.Title("综合测试：分割线 + 时间选择器").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("请选择会议时间：")
                 .Hr(hr => hr.Margin("8px 0"))
@@ -184,7 +184,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("客户数据表"))
+            .Header(h => h.Title("客户数据表").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Table(table => table
                     .PageSize(5)
@@ -206,7 +206,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("项目状态表"))
+            .Header(h => h.Title("项目状态表").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Table(table => table
                     .PageSize(5)
@@ -236,7 +236,7 @@ public class NewComponentsSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("销售数据表"))
+            .Header(h => h.Title("销售数据表").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Table(table => table
                     .PageSize(5)

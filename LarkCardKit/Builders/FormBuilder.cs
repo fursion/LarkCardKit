@@ -263,7 +263,7 @@ public class FormBuilder
     /// <returns>当前构建器实例（支持链式调用）</returns>
     public FormBuilder PlainText(string content)
     {
-        _form.Elements.Add(new Div
+        _form.Elements.Add(new TextDiv
         {
             Text = new Models.Elements.PlainText { Content = content }
         });
@@ -277,21 +277,21 @@ public class FormBuilder
     /// <returns>当前构建器实例（支持链式调用）</returns>
     public FormBuilder Markdown(string content)
     {
-        _form.Elements.Add(new Div
+        _form.Elements.Add(new Models.Elements.Markdown
         {
-            Text = new Models.Elements.Markdown { Content = content }
+            Content = content
         });
         return this;
     }
     
     /// <summary>
-    /// 添加 Div 容器元素
+    /// 添加 TextDiv 容器元素
     /// </summary>
-    /// <param name="configure">Div 构建器配置</param>
+    /// <param name="configure">TextDiv 构建器配置</param>
     /// <returns>当前构建器实例（支持链式调用）</returns>
-    public FormBuilder Div(Action<DivBuilder> configure)
+    public FormBuilder TextDiv(Action<TextDivBuilder> configure)
     {
-        var builder = new DivBuilder();
+        var builder = new TextDivBuilder();
         configure(builder);
         _form.Elements.Add(builder.Build());
         return this;
@@ -461,7 +461,7 @@ public class ColumnBuilder
     /// <returns>当前构建器实例（支持链式调用）</returns>
     public ColumnBuilder PlainText(string content)
     {
-        _column.Elements.Add(new Div
+        _column.Elements.Add(new TextDiv
         {
             Text = new Models.Elements.PlainText { Content = content }
         });
@@ -475,9 +475,9 @@ public class ColumnBuilder
     /// <returns>当前构建器实例（支持链式调用）</returns>
     public ColumnBuilder Markdown(string content)
     {
-        _column.Elements.Add(new Div
+        _column.Elements.Add(new Models.Elements.Markdown
         {
-            Text = new Models.Elements.Markdown { Content = content }
+            Content = content
         });
         return this;
     }

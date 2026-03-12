@@ -37,6 +37,13 @@ public class PickerTime : Element
     public PlainText? Placeholder { get; set; }
     
     /// <summary>
+    /// 文本标签
+    /// </summary>
+    [JsonPropertyName("label")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? Label { get; set; }
+    
+    /// <summary>
     /// 初始时间，格式 HH:mm
     /// </summary>
     [JsonPropertyName("initial_time")]

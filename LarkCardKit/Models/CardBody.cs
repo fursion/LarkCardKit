@@ -34,4 +34,25 @@ public class CardBody
     [JsonPropertyName("padding")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Padding { get; set; }
+    
+    /// <summary>
+    /// 排列方向：vertical/horizontal
+    /// </summary>
+    [JsonPropertyName("direction")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Direction { get; set; }
+    
+    /// <summary>
+    /// 水平对齐方式：left/center/right
+    /// </summary>
+    [JsonPropertyName("horizontal_align")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? HorizontalAlign { get; set; }
+    
+    /// <summary>
+    /// 垂直对齐方式：top/center/bottom
+    /// </summary>
+    [JsonPropertyName("vertical_align")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? VerticalAlign { get; set; }
 }

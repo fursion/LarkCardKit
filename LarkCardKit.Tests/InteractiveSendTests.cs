@@ -14,7 +14,7 @@ public class InteractiveSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Button 按钮测试"))
+            .Header(h => h.Title("Button 按钮测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Button(btn => btn
                     .Text("默认按钮"))
@@ -38,7 +38,7 @@ public class InteractiveSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Input 输入框测试"))
+            .Header(h => h.Title("Input 输入框测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("inputForm")
@@ -73,7 +73,7 @@ public class InteractiveSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Select 选择器测试"))
+            .Header(h => h.Title("Select 选择器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("selectForm")
@@ -107,7 +107,7 @@ public class InteractiveSendTests : IntegrationTestBase
         };
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Select 使用 OptionsInfo 测试"))
+            .Header(h => h.Title("Select 使用 OptionsInfo 测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("selectForm2")
@@ -131,7 +131,7 @@ public class InteractiveSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("MultiSelect 多选测试"))
+            .Header(h => h.Title("MultiSelect 多选测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("multiSelectForm")
@@ -159,7 +159,7 @@ public class InteractiveSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("DatePicker 日期选择器测试"))
+            .Header(h => h.Title("DatePicker 日期选择器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("dateForm")
@@ -183,7 +183,7 @@ public class InteractiveSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Checkbox 多选框测试"))
+            .Header(h => h.Title("Checkbox 多选框测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("checkboxForm")
@@ -217,7 +217,7 @@ public class InteractiveSendTests : IntegrationTestBase
         };
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Checkbox 使用 OptionsInfo 测试"))
+            .Header(h => h.Title("Checkbox 使用 OptionsInfo 测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("checkboxForm2")

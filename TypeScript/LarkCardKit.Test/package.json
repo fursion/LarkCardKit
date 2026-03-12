@@ -1,0 +1,21 @@
+{
+  "name": "larkcardkit.test",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "basic": "bun run src/basic-card.ts",
+    "form": "bun run src/form-card.ts",
+    "table": "bun run src/table-card.ts",
+    "template": "bun run src/template-card.ts"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.30.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}

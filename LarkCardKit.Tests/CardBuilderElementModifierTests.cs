@@ -108,11 +108,14 @@ public class CardBuilderElementModifierTests
     public void ModifyElement_InDiv_ShouldModifySuccessfully()
     {
         var pt = new PlainText { Content = "原始内容", ElementId = "text1" };
+        var divElement = new PlainTextElement
+        {
+            Direction = "vertical",
+            Elements = new List<Element> { pt }
+        };
+
         var builder = CardBuilder.Create()
-            .Body(b => b
-                .Div(d => d
-                    .Vertical()
-                    .Add(pt)));
+            .Body(b => b.AddElement(divElement));
 
         var result = builder.ModifyElement<PlainText>("text1", text =>
         {
@@ -204,12 +207,12 @@ public class CardBuilderElementModifierTests
     public void ModifyElement_NestedStructure_ShouldModifySuccessfully()
     {
         var nestedMd = new Markdown { Content = "原始Markdown", ElementId = "md1" };
-        var nestedDiv = new Div
+        var nestedDiv = new PlainTextElement
         {
             Direction = "vertical",
             Elements = new List<Element> { nestedMd }
         };
-        var outerDiv = new Div
+        var outerDiv = new PlainTextElement
         {
             Direction = "vertical",
             Elements = new List<Element> { nestedDiv }

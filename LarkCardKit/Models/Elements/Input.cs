@@ -118,6 +118,13 @@ public class Input : Element
     public ConfirmConfig? Confirm { get; set; }
     
     /// <summary>
+    /// 当输入类型为密码类型时，是否展示前缀图标
+    /// </summary>
+    [JsonPropertyName("show_icon")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool? ShowIcon { get; set; }
+    
+    /// <summary>
     /// 交互行为列表
     /// </summary>
     [JsonPropertyName("behaviors")]

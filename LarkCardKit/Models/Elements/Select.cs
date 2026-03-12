@@ -38,6 +38,13 @@ public class Select : Element
     public PlainText? Placeholder { get; set; }
     
     /// <summary>
+    /// 文本标签
+    /// </summary>
+    [JsonPropertyName("label")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? Label { get; set; }
+    
+    /// <summary>
     /// 初始选项
     /// </summary>
     [JsonPropertyName("initial_option")]

@@ -2,6 +2,10 @@ using LarkCardKit.Models.Elements;
 
 namespace LarkCardKit.Builders;
 
+/// <summary>
+/// PlainText 构建器（仅构建 plain_text 标签）
+/// 注意：如需构建 lark_md 标签，请使用 TextBuilder
+/// </summary>
 public class PlainTextBuilder
 {
     private readonly PlainText _plainText = new();

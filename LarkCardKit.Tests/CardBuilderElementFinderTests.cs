@@ -40,14 +40,19 @@ public class CardBuilderElementFinderTests
     [Fact]
     public void FindElementById_InDiv_ShouldFindElement()
     {
+        // 手动创建 PlainTextElement 并添加子元素
+        var divElement = new PlainTextElement
+        {
+            Direction = "vertical",
+            Elements = new List<Element>
+            {
+                new PlainText { Content = "内容1" },
+                new Button { Text = new PlainText { Content = "按钮" }, ElementId = "divBtn" }
+            }
+        };
+
         var builder = CardBuilder.Create()
-            .Body(b => b
-                .Div(d => d
-                    .Vertical()
-                    .PlainText("内容1")
-                    .Button(btn => btn
-                        .Text("按钮")
-                        .ElementId("divBtn"))));
+            .Body(b => b.AddElement(divElement));
 
         var element = builder.FindElementById("divBtn");
 
@@ -154,7 +159,7 @@ public class CardBuilderElementFinderTests
     [Fact]
     public void FindElementById_NestedDiv_ShouldFindElement()
     {
-        var nestedDiv = new Div
+        var nestedDiv = new PlainTextElement
         {
             Direction = "vertical",
             Elements = new List<Element>
@@ -163,11 +168,14 @@ public class CardBuilderElementFinderTests
             }
         };
 
+        var outerDiv = new PlainTextElement
+        {
+            Direction = "vertical",
+            Elements = new List<Element> { nestedDiv }
+        };
+
         var builder = CardBuilder.Create()
-            .Body(b => b
-                .Div(d => d
-                    .Vertical()
-                    .Add(nestedDiv)));
+            .Body(b => b.AddElement(outerDiv));
 
         var element = builder.FindElementById("deepBtn");
 
@@ -241,17 +249,24 @@ public class CardBuilderElementFinderTests
             Elements = new List<Element> { nestedInput }
         };
 
+        var outerDiv = new PlainTextElement
+        {
+            Direction = "vertical",
+            Elements = new List<Element>
+            {
+                new ColumnSet
+                {
+                    Columns = new List<Column>
+                    {
+                        new() { Width = "100%", Elements = new List<Element> { form } }
+                    }
+                }
+            }
+        };
+
         var builder = CardBuilder.Create()
             .Body(b => b
-                .Div(d => d
-                    .Vertical()
-                    .Add(new ColumnSet
-                    {
-                        Columns = new List<Column>
-                        {
-                            new() { Width = "100%", Elements = new List<Element> { form } }
-                        }
-                    }))
+                .AddElement(outerDiv)
                 .Button(btn => btn.Text("按钮").ElementId("btn1")));
 
         var input = builder.FindElementById("nestedInput");

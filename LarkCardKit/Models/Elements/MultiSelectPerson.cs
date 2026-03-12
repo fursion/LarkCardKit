@@ -19,6 +19,13 @@ public class MultiSelectPerson : Element
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Placeholder { get; set; }
     
+    /// <summary>
+    /// 文本标签
+    /// </summary>
+    [JsonPropertyName("label")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? Label { get; set; }
+    
     [JsonPropertyName("selected_values")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>? SelectedValues { get; set; }

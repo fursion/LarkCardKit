@@ -1,4 +1,5 @@
 using LarkCardKit.Builders;
+using LarkCardKit.Models.Elements;
 using Xunit;
 
 namespace LarkCardKit.Tests;
@@ -11,11 +12,11 @@ public class HeaderTextTagTests
         var textTag = new TextTagBuilder()
             .Text("测试标签")
             .Build();
-        
+
         Assert.Equal("text_tag", textTag.Tag);
-        Assert.Equal("测试标签", textTag.Text?.Content);
+        Assert.Equal("测试标签", (textTag.Text as PlainText)?.Content);
     }
-    
+
     [Fact]
     public void TextTagBuilder_WithColor_ShouldSetColor()
     {
@@ -23,8 +24,8 @@ public class HeaderTextTagTests
             .Text("进行中")
             .Color("blue")
             .Build();
-        
-        Assert.Equal("进行中", textTag.Text?.Content);
+
+        Assert.Equal("进行中", (textTag.Text as PlainText)?.Content);
         Assert.Equal("blue", textTag.Color);
     }
     
@@ -72,13 +73,13 @@ public class HeaderTextTagTests
                 .Title("任务状态")
                 .TextTag(t => t.Text("进行中").Color("blue")))
             .Build();
-        
+
         Assert.NotNull(card.Header?.TextTagList);
         Assert.Single(card.Header.TextTagList);
-        Assert.Equal("进行中", card.Header.TextTagList[0].Text?.Content);
+        Assert.Equal("进行中", (card.Header.TextTagList[0].Text as PlainText)?.Content);
         Assert.Equal("blue", card.Header.TextTagList[0].Color);
     }
-    
+
     [Fact]
     public void CardHeaderBuilder_WithMultipleTextTags_ShouldAddAllTags()
     {
@@ -89,12 +90,12 @@ public class HeaderTextTagTests
                 .TextTag(t => t.Text("紧急").Color("red"))
                 .TextTag(t => t.Text("重要").Color("orange")))
             .Build();
-        
+
         Assert.NotNull(card.Header?.TextTagList);
         Assert.Equal(3, card.Header.TextTagList.Count);
-        Assert.Equal("进行中", card.Header.TextTagList[0].Text?.Content);
-        Assert.Equal("紧急", card.Header.TextTagList[1].Text?.Content);
-        Assert.Equal("重要", card.Header.TextTagList[2].Text?.Content);
+        Assert.Equal("进行中", (card.Header.TextTagList[0].Text as PlainText)?.Content);
+        Assert.Equal("紧急", (card.Header.TextTagList[1].Text as PlainText)?.Content);
+        Assert.Equal("重要", (card.Header.TextTagList[2].Text as PlainText)?.Content);
     }
     
     [Fact]

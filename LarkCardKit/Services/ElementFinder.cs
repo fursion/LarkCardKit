@@ -3,6 +3,28 @@ using LarkCardKit.Models.Elements;
 
 namespace LarkCardKit.Services;
 
+/// <summary>
+/// 元素查找器实现
+/// 提供通过 ID 或 tag 查找和修改卡片组件的能力
+/// </summary>
+/// <example>
+/// <code>
+/// var finder = new ElementFinder(card);
+///
+/// // 查找组件
+/// var button = finder.FindElementById("btn1");
+///
+/// // 修改组件
+/// finder.ModifyElementById("btn1", el => {
+///     if (el is Button btn) btn.Disabled = true;
+/// });
+///
+/// // 批量修改
+/// finder.UpdateAllByTag("button", el => {
+///     if (el is Button btn) btn.Disabled = true;
+/// });
+/// </code>
+/// </example>
 public class ElementFinder : IElementFinder
 {
     private readonly Card _card;
@@ -12,6 +34,7 @@ public class ElementFinder : IElementFinder
         _card = card ?? throw new ArgumentNullException(nameof(card));
     }
 
+    /// <inheritdoc />
     public Element? FindElementById(string elementId)
     {
         if (string.IsNullOrEmpty(elementId))
@@ -20,16 +43,59 @@ public class ElementFinder : IElementFinder
         return FindElementRecursive(_card.Body.Elements, elementId);
     }
 
+    /// <inheritdoc />
     public T? FindElementById<T>(string elementId) where T : Element
     {
         var element = FindElementById(elementId);
         return element as T;
     }
 
+    /// <inheritdoc />
     public bool TryFindElementById(string elementId, out Element? element)
     {
         element = FindElementById(elementId);
         return element != null;
+    }
+
+    /// <inheritdoc />
+    public bool ModifyElementById(string elementId, Action<Element> modify)
+    {
+        var element = FindElementById(elementId);
+        if (element == null)
+            return false;
+
+        modify(element);
+        return true;
+    }
+
+    /// <inheritdoc />
+    public bool ModifyElementById<T>(string elementId, Action<T> modify) where T : Element
+    {
+        var element = FindElementById<T>(elementId);
+        if (element == null)
+            return false;
+
+        modify(element);
+        return true;
+    }
+
+    /// <inheritdoc />
+    public IEnumerable<Element> FindAllElementsByTag(string tag)
+    {
+        var results = new List<Element>();
+        FindElementsByTagRecursive(_card.Body.Elements, tag, results);
+        return results;
+    }
+
+    /// <inheritdoc />
+    public int UpdateAllByTag(string tag, Action<Element> modify)
+    {
+        var elements = FindAllElementsByTag(tag).ToList();
+        foreach (var element in elements)
+        {
+            modify(element);
+        }
+        return elements.Count;
     }
 
     private Element? FindElementRecursive(List<Element> elements, string elementId)
@@ -41,7 +107,7 @@ public class ElementFinder : IElementFinder
 
             var found = element switch
             {
-                Div div => FindInDiv(div, elementId),
+                TextDiv textDiv => FindInTextDiv(textDiv, elementId),
                 Form form => FindInForm(form, elementId),
                 ColumnSet columnSet => FindInColumnSet(columnSet, elementId),
                 _ => null
@@ -54,23 +120,16 @@ public class ElementFinder : IElementFinder
         return null;
     }
 
-    private Element? FindInDiv(Div div, string elementId)
+    private Element? FindInTextDiv(TextDiv textDiv, string elementId)
     {
-        if (div.Text != null)
+        if (textDiv.Text != null)
         {
-            if (div.Text.ElementId == elementId)
-                return div.Text;
+            if (textDiv.Text.ElementId == elementId)
+                return textDiv.Text;
 
-            var foundInText = FindInNestedElement(div.Text, elementId);
+            var foundInText = FindInNestedElement(textDiv.Text, elementId);
             if (foundInText != null)
                 return foundInText;
-        }
-
-        if (div.Elements != null && div.Elements.Count > 0)
-        {
-            var found = FindElementRecursive(div.Elements, elementId);
-            if (found != null)
-                return found;
         }
 
         return null;
@@ -108,10 +167,68 @@ public class ElementFinder : IElementFinder
     {
         return element switch
         {
-            Div div => FindInDiv(div, elementId),
+            TextDiv textDiv => FindInTextDiv(textDiv, elementId),
             Form form => FindInForm(form, elementId),
             ColumnSet columnSet => FindInColumnSet(columnSet, elementId),
             _ => null
         };
+    }
+
+    private void FindElementsByTagRecursive(List<Element> elements, string tag, List<Element> results)
+    {
+        foreach (var element in elements)
+        {
+            if (element.Tag == tag)
+                results.Add(element);
+
+            switch (element)
+            {
+                case TextDiv textDiv:
+                    if (textDiv.Text != null && textDiv.Text.Tag == tag)
+                        results.Add(textDiv.Text);
+                    FindElementsByTagInNestedElement(textDiv.Text, tag, results);
+                    break;
+
+                case Form form:
+                    FindElementsByTagRecursive(form.Elements, tag, results);
+                    break;
+
+                case ColumnSet columnSet:
+                    foreach (var column in columnSet.Columns)
+                    {
+                        if (column.Tag == tag)
+                            results.Add(column);
+                        FindElementsByTagRecursive(column.Elements, tag, results);
+                    }
+                    break;
+            }
+        }
+    }
+
+    private void FindElementsByTagInNestedElement(Element? element, string tag, List<Element> results)
+    {
+        if (element == null) return;
+
+        switch (element)
+        {
+            case TextDiv textDiv:
+                if (textDiv.Text != null && textDiv.Text.Tag == tag)
+                    results.Add(textDiv.Text);
+                FindElementsByTagInNestedElement(textDiv.Text, tag, results);
+                break;
+
+            case Form form:
+                FindElementsByTagRecursive(form.Elements, tag, results);
+                break;
+
+            case ColumnSet columnSet:
+                foreach (var column in columnSet.Columns)
+                {
+                    if (column.Tag == tag)
+                        results.Add(column);
+                    FindElementsByTagRecursive(column.Elements, tag, results);
+                }
+                break;
+        }
     }
 }

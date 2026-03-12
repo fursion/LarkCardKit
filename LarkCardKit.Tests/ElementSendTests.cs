@@ -12,7 +12,7 @@ public class ElementSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("PlainText 元素测试"))
+            .Header(h => h.Title("PlainText 元素测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b.PlainText("这是纯文本元素内容，测试 PlainText 组件发送。"))
             .Build();
         
@@ -28,7 +28,7 @@ public class ElementSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Markdown 元素测试"))
+            .Header(h => h.Title("Markdown 元素测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Markdown("**粗体文本** 和 *斜体文本*\n")
                 .Markdown("- 列表项 1\n- 列表项 2\n- 列表项 3\n")
@@ -67,7 +67,7 @@ public class ElementSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("多个 PlainText 元素测试"))
+            .Header(h => h.Title("多个 PlainText 元素测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("第一行文本")
                 .PlainText("第二行文本")
@@ -86,7 +86,7 @@ public class ElementSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("混合元素测试"))
+            .Header(h => h.Title("混合元素测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("纯文本内容")
                 .Markdown("**Markdown 内容**")

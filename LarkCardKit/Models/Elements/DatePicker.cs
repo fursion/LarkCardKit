@@ -33,6 +33,13 @@ public class DatePicker : Element
     public PlainText? Placeholder { get; set; }
     
     /// <summary>
+    /// 文本标签
+    /// </summary>
+    [JsonPropertyName("label")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? Label { get; set; }
+    
+    /// <summary>
     /// 初始日期，格式 yyyy-MM-dd
     /// </summary>
     [JsonPropertyName("initial_date")]

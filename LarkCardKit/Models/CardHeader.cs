@@ -11,15 +11,21 @@ public class CardHeader
     /// <summary>
     /// 头部标题
     /// </summary>
+    /// <remarks>
+    /// 支持 PlainText (tag: "plain_text") 或 MarkdownText (tag: "lark_md")
+    /// </remarks>
     [JsonPropertyName("title")]
-    public object? Title { get; set; }
+    public Element? Title { get; set; }
     
     /// <summary>
     /// 头部副标题
     /// </summary>
+    /// <remarks>
+    /// 支持 PlainText (tag: "plain_text") 或 MarkdownText (tag: "lark_md")
+    /// </remarks>
     [JsonPropertyName("subtitle")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public object? Subtitle { get; set; }
+    public Element? Subtitle { get; set; }
     
     /// <summary>
     /// 标题后缀标签列表

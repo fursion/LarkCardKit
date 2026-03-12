@@ -1,0 +1,44 @@
+{
+  "name": "lark-card-kit",
+  "version": "1.0.0",
+  "description": "TypeScript library for building Lark Card 2.0 messages",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.cts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "lark",
+    "feishu",
+    "card",
+    "builder",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rslib/core": "^0.20.0",
+    "@rstest/adapter-rslib": "^0.2.1",
+    "@rstest/core": "^0.9.2",
+    "typescript": "^5.6.0"
+  }
+}

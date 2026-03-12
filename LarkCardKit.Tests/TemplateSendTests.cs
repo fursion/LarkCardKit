@@ -15,7 +15,7 @@ public class TemplateSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("欢迎 ${userName}"))
+            .Header(h => h.Title("欢迎 ${userName}").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("您好，${userName}！")
                 .Markdown("您的订单 **${orderId}** 已发货。")
@@ -37,7 +37,7 @@ public class TemplateSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("用户信息: ${user.name}"))
+            .Header(h => h.Title("用户信息: ${user.name}").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("姓名: ${user.name}")
                 .PlainText("部门: ${user.department}")
@@ -57,7 +57,7 @@ public class TemplateSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("默认值测试"))
+            .Header(h => h.Title("默认值测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("已提供参数: ${provided:未提供}")
                 .PlainText("未提供参数: ${notProvided:使用默认值}"))
@@ -76,7 +76,7 @@ public class TemplateSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("${title}"))
+            .Header(h => h.Title("${title}").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("${content}")
                 .Markdown("**状态**: ${status}"))
@@ -107,7 +107,7 @@ public class TemplateSendTests : IntegrationTestBase
         };
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("${title}"))
+            .Header(h => h.Title("${title}").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .PlainText("数量: ${count}")
                 .PlainText("启用状态: ${enabled}"))
@@ -126,7 +126,7 @@ public class TemplateSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("配置对象模板测试"))
+            .Header(h => h.Title("配置对象模板测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Button(btn => btn
                     .Text("模板按钮类型")
@@ -158,7 +158,7 @@ public class TemplateSendTests : IntegrationTestBase
         };
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("OptionsFrom 模板测试"))
+            .Header(h => h.Title("OptionsFrom 模板测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("templateForm")

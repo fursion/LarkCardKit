@@ -13,7 +13,7 @@ public class LayoutSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Div 容器测试"))
+            .Header(h => h.Title("Div 容器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Div(div => div
                     .Text("这是 Div 容器中的文本内容")))
@@ -29,17 +29,16 @@ public class LayoutSendTests : IntegrationTestBase
     public async Task SendDivWithMarkdown_ShouldSucceed()
     {
         SkipIfNotConfigured();
-        
+
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Div + Markdown 测试"))
+            .Header(h => h.Title("Div + Markdown 测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
-                .Div(div => div
-                    .Markdown("**粗体标题**\n- 项目 1\n- 项目 2")))
+                .Markdown("**粗体标题**\n- 项目 1\n- 项目 2"))
             .Build();
-        
+
         var messageId = await SendCardAsync("Div + Markdown", card);
         Assert.NotNull(messageId);
-        
+
         await DelayAsync();
     }
     
@@ -49,7 +48,7 @@ public class LayoutSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("ColumnSet 两栏布局测试"))
+            .Header(h => h.Title("ColumnSet 两栏布局测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .ColumnSet(cs => cs
                     .HorizontalSpacing("8px")
@@ -73,7 +72,7 @@ public class LayoutSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("ColumnSet 三栏布局测试"))
+            .Header(h => h.Title("ColumnSet 三栏布局测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .ColumnSet(cs => cs
                     .AddColumn(col => col.Width("33%").Markdown("**列 1**\n第一列内容"))
@@ -93,7 +92,7 @@ public class LayoutSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("Form 容器测试"))
+            .Header(h => h.Title("Form 容器测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .Form(form => form
                     .Name("testForm")
@@ -117,7 +116,7 @@ public class LayoutSendTests : IntegrationTestBase
         SkipIfNotConfigured();
         
         var card = CardBuilder.Create()
-            .Header(h => h.Title("嵌套布局测试"))
+            .Header(h => h.Title("嵌套布局测试").TextTag(t => t.Text("C#").Color("purple")))
             .Body(b => b
                 .ColumnSet(cs => cs
                     .AddColumn(col => col

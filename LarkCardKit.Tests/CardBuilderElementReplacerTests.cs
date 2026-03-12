@@ -91,13 +91,17 @@ public class CardBuilderElementReplacerTests
     [Fact]
     public void ReplaceElement_InDiv_ShouldReplaceSuccessfully()
     {
+        var divElement = new PlainTextElement
+        {
+            Direction = "vertical",
+            Elements = new List<Element>
+            {
+                new Button { Text = new PlainText { Content = "Div中的按钮" }, ElementId = "divBtn" }
+            }
+        };
+
         var builder = CardBuilder.Create()
-            .Body(b => b
-                .Div(d => d
-                    .Vertical()
-                    .Button(btn => btn
-                        .Text("Div中的按钮")
-                        .ElementId("divBtn"))));
+            .Body(b => b.AddElement(divElement));
 
         var newSelect = new Select
         {
@@ -169,12 +173,12 @@ public class CardBuilderElementReplacerTests
     public void ReplaceElement_NestedStructure_ShouldReplaceSuccessfully()
     {
         var nestedInput = new Input { Name = "nestedInput", ElementId = "deepInput" };
-        var nestedDiv = new Div
+        var nestedDiv = new PlainTextElement
         {
             Direction = "vertical",
             Elements = new List<Element> { nestedInput }
         };
-        var outerDiv = new Div
+        var outerDiv = new PlainTextElement
         {
             Direction = "vertical",
             Elements = new List<Element> { nestedDiv }
@@ -303,9 +307,7 @@ public class CardBuilderElementReplacerTests
 
         var builder = CardBuilder.Create()
             .Body(b => b
-                .Div(d => d
-                    .Vertical()
-                    .PlainText("顶部文本"))
+                .PlainText("顶部文本")
                 .Form(f => f
                     .Name("form")
                     .Input(i => i.Name("email").ElementId("email"))

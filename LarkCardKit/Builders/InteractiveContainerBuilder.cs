@@ -140,13 +140,13 @@ public class InteractiveContainerBuilder
 
     public InteractiveContainerBuilder PlainText(string content)
     {
-        _container.Elements.Add(new Div { Text = new PlainText { Content = content } });
+        _container.Elements.Add(new TextDiv { Text = new PlainText { Content = content } });
         return this;
     }
 
     public InteractiveContainerBuilder Markdown(string content)
     {
-        _container.Elements.Add(new Div { Text = new Markdown { Content = content } });
+        _container.Elements.Add(new Markdown { Content = content });
         return this;
     }
 
@@ -166,9 +166,9 @@ public class InteractiveContainerBuilder
         return this;
     }
 
-    public InteractiveContainerBuilder Div(Action<DivBuilder> configure)
+    public InteractiveContainerBuilder TextDiv(Action<TextDivBuilder> configure)
     {
-        var builder = new DivBuilder();
+        var builder = new TextDivBuilder();
         configure(builder);
         _container.Elements.Add(builder.Build());
         return this;
