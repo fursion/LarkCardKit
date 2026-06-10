@@ -10,7 +10,14 @@ public class SelectImg : Element
 {
     /// <inheritdoc/>
     public override string Tag => "select_img";
-    
+
+    /// <summary>
+    /// 元素唯一标识
+    /// </summary>
+    [JsonPropertyName("element_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? ElementId { get; set; }
+
     /// <summary>
     /// 选择器唯一标识，表单容器中必填
     /// </summary>
@@ -73,7 +80,14 @@ public class SelectImg : Element
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Disabled { get; set; }
-    
+
+    /// <summary>
+    /// 禁用提示
+    /// </summary>
+    [JsonPropertyName("disabled_tips")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? DisabledTips { get; set; }
+
     /// <summary>
     /// 二次确认配置
     /// </summary>
@@ -87,6 +101,13 @@ public class SelectImg : Element
     [JsonPropertyName("behaviors")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<object>? Behaviors { get; set; }
+
+    /// <summary>
+    /// 外边距
+    /// </summary>
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
 }
 
 /// <summary>

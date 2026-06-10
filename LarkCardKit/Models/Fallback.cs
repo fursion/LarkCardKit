@@ -12,4 +12,12 @@ public class Fallback
     [JsonPropertyName("content")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Content { get; set; }
+
+    [JsonPropertyName("config")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public CardConfig? Config { get; set; }
+
+    [JsonPropertyName("elements")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<Element>? Elements { get; set; }
 }

@@ -92,4 +92,11 @@ public class Table : Element
     [JsonPropertyName("rows")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Dictionary<string, object?>>? Rows { get; set; }
+
+    /// <summary>
+    /// 外边距
+    /// </summary>
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
 }

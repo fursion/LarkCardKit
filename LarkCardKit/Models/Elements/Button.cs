@@ -6,7 +6,14 @@ namespace LarkCardKit.Models.Elements;
 public class Button : Element
 {
     public override string Tag => "button";
-    
+
+    /// <summary>
+    /// 元素唯一标识
+    /// </summary>
+    [JsonPropertyName("element_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? ElementId { get; set; }
+
     [JsonPropertyName("type")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Type { get; set; }
@@ -54,7 +61,18 @@ public class Button : Element
     [JsonPropertyName("form_action_type")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? FormActionType { get; set; }
-    
+
+    /// <summary>
+    /// 外边距
+    /// </summary>
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
+
+    /// <summary>
+    /// 点击行为（已废弃，请使用 behaviors 属性）
+    /// </summary>
+    [Obsolete("请使用 behaviors 属性代替")]
     [JsonPropertyName("onclick")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public object? OnClick { get; set; }

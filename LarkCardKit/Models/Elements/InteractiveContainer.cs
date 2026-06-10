@@ -7,6 +7,14 @@ public class InteractiveContainer : Element
 {
     public override string Tag => "interactive_container";
 
+    [JsonPropertyName("element_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? ElementId { get; set; }
+
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
+
     [JsonPropertyName("width")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Width { get; set; }

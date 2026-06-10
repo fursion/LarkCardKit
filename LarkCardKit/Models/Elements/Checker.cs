@@ -5,7 +5,14 @@ namespace LarkCardKit.Models.Elements;
 public class Checker : Element
 {
     public override string Tag => "checker";
-    
+
+    /// <summary>
+    /// 元素唯一标识
+    /// </summary>
+    [JsonPropertyName("element_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? ElementId { get; set; }
+
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Name { get; set; }
@@ -40,7 +47,7 @@ public class Checker : Element
     
     [JsonPropertyName("confirm")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public object? Confirm { get; set; }
+    public ConfirmConfig? Confirm { get; set; }
     
     [JsonPropertyName("behaviors")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

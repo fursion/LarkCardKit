@@ -36,6 +36,16 @@ public class ColumnSet : Element
     [JsonPropertyName("horizontal_spacing")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? HorizontalSpacing { get; set; }
+
+    /// <summary>
+    /// 弹性模式
+    /// </summary>
+    /// <remarks>
+    /// 可选值：none（不弹性）、flow（流动布局）
+    /// </remarks>
+    [JsonPropertyName("flex_mode")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? FlexMode { get; set; }
 }
 
 /// <summary>

@@ -10,7 +10,14 @@ public class DatePicker : Element
 {
     /// <inheritdoc/>
     public override string Tag => "date_picker";
-    
+
+    /// <summary>
+    /// 元素唯一标识
+    /// </summary>
+    [JsonPropertyName("element_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? ElementId { get; set; }
+
     /// <summary>
     /// 日期选择器唯一标识，表单容器中必填
     /// </summary>
@@ -59,18 +66,32 @@ public class DatePicker : Element
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Disabled { get; set; }
-    
+
+    /// <summary>
+    /// 禁用提示
+    /// </summary>
+    [JsonPropertyName("disabled_tips")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? DisabledTips { get; set; }
+
     /// <summary>
     /// 二次确认配置
     /// </summary>
     [JsonPropertyName("confirm")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ConfirmConfig? Confirm { get; set; }
-    
+
     /// <summary>
     /// 交互行为列表
     /// </summary>
     [JsonPropertyName("behaviors")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<object>? Behaviors { get; set; }
+
+    /// <summary>
+    /// 外边距
+    /// </summary>
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
 }

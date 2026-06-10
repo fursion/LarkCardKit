@@ -31,7 +31,14 @@ public class Checkbox : Element
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Disabled { get; set; }
-    
+
+    /// <summary>
+    /// 禁用提示
+    /// </summary>
+    [JsonPropertyName("disabled_tips")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? DisabledTips { get; set; }
+
     /// <summary>
     /// 占位文本
     /// </summary>
@@ -66,7 +73,14 @@ public class Checkbox : Element
     [JsonPropertyName("selected_values")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>? SelectedValues { get; set; }
-    
+
+    /// <summary>
+    /// 外边距
+    /// </summary>
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
+
     /// <summary>
     /// 交互行为列表
     /// </summary>

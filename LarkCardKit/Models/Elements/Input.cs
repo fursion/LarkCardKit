@@ -11,7 +11,14 @@ public class Input : Element
 {
     /// <inheritdoc/>
     public override string Tag => "input";
-    
+
+    /// <summary>
+    /// 元素唯一标识
+    /// </summary>
+    [JsonPropertyName("element_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? ElementId { get; set; }
+
     /// <summary>
     /// 输入框唯一标识，表单容器中必填
     /// </summary>
@@ -101,7 +108,7 @@ public class Input : Element
     /// </summary>
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public object? Disabled { get; set; }
+    public bool? Disabled { get; set; }
     
     /// <summary>
     /// 禁用提示
@@ -130,4 +137,11 @@ public class Input : Element
     [JsonPropertyName("behaviors")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<object>? Behaviors { get; set; }
+
+    /// <summary>
+    /// 外边距
+    /// </summary>
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
 }

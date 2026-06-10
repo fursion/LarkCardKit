@@ -6,7 +6,14 @@ namespace LarkCardKit.Models.Elements;
 public class MultiSelectPerson : Element
 {
     public override string Tag => "multi_select_person";
-    
+
+    /// <summary>
+    /// 元素唯一标识
+    /// </summary>
+    [JsonPropertyName("element_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? ElementId { get; set; }
+
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Name { get; set; }
@@ -41,7 +48,14 @@ public class MultiSelectPerson : Element
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Disabled { get; set; }
-    
+
+    /// <summary>
+    /// 禁用提示
+    /// </summary>
+    [JsonPropertyName("disabled_tips")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PlainText? DisabledTips { get; set; }
+
     [JsonPropertyName("confirm")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ConfirmConfig? Confirm { get; set; }
@@ -49,6 +63,13 @@ public class MultiSelectPerson : Element
     [JsonPropertyName("behaviors")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<object>? Behaviors { get; set; }
+
+    /// <summary>
+    /// 外边距
+    /// </summary>
+    [JsonPropertyName("margin")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public new string? Margin { get; set; }
 }
 
 public class PersonOption
