@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using LarkCardKit.Config;
 using LarkCardKit.Models.Elements;
 
 namespace LarkCardKit.Models;

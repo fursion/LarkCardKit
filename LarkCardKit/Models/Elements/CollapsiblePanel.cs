@@ -12,31 +12,15 @@ public class CollapsiblePanel : Element
     public override string Tag => "collapsible_panel";
 
     /// <summary>
-    /// 元素唯一标识
-    /// </summary>
-    [JsonPropertyName("element_id")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? ElementId { get; set; }
-
-    /// <summary>
     /// 是否展开
     /// </summary>
     [JsonPropertyName("expanded")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Expanded { get; set; }
-
-    /// <summary>
-    /// 外边距
-    /// </summary>
-    [JsonPropertyName("margin")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? Margin { get; set; }
 
     /// <summary>
     /// 内边距
     /// </summary>
     [JsonPropertyName("padding")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Padding { get; set; }
 
     /// <summary>
@@ -67,14 +51,12 @@ public class CollapsiblePanelHeader
     /// 头部图标
     /// </summary>
     [JsonPropertyName("icon")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HeaderIcon? Icon { get; set; }
     
     /// <summary>
     /// 展开时的图标
     /// </summary>
     [JsonPropertyName("expanded_icon")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HeaderIcon? ExpandedIcon { get; set; }
 }
 
@@ -93,20 +75,17 @@ public class HeaderIcon
     /// 标准图标 token
     /// </summary>
     [JsonPropertyName("token")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Token { get; set; }
     
     /// <summary>
     /// 图标颜色
     /// </summary>
     [JsonPropertyName("color")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Color { get; set; }
     
     /// <summary>
     /// 自定义图片 key
     /// </summary>
     [JsonPropertyName("img_key")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? ImgKey { get; set; }
 }

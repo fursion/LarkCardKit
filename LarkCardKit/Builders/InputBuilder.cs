@@ -207,23 +207,6 @@ public class InputBuilder
     }
 
     /// <summary>
-    /// 设置是否禁用（使用模板值）
-    /// </summary>
-    /// <param name="value">模板值对象</param>
-    /// <returns>当前构建器实例（支持链式调用）</returns>
-    /// <remarks>
-    /// 使用此方法时，禁用状态将在调用 <see cref="CardBuilder.SetParameter"/> 时动态填充
-    /// </remarks>
-    public InputBuilder Disabled(TemplateValue value)
-    {
-        var placeholder = value.DefaultValue != null
-            ? $"${{{value.Key}:{value.DefaultValue}}}"
-            : $"${{{value.Key}}}";
-        _input.Disabled = placeholder;
-        return this;
-    }
-    
-    /// <summary>
     /// 设置禁用提示文本
     /// </summary>
     /// <param name="tips">禁用提示内容</param>

@@ -16,45 +16,33 @@ public class PickerTime : Element
     public override string Tag => "picker_time";
 
     /// <summary>
-    /// 元素唯一标识
-    /// </summary>
-    [JsonPropertyName("element_id")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? ElementId { get; set; }
-
-    /// <summary>
     /// 时间选择器唯一标识，表单容器中必填
     /// </summary>
     [JsonPropertyName("name")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Name { get; set; }
     
     /// <summary>
     /// 是否必填
     /// </summary>
     [JsonPropertyName("required")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Required { get; set; }
     
     /// <summary>
     /// 占位文本
     /// </summary>
     [JsonPropertyName("placeholder")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Placeholder { get; set; }
     
     /// <summary>
     /// 文本标签
     /// </summary>
     [JsonPropertyName("label")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Label { get; set; }
     
     /// <summary>
     /// 初始时间，格式 HH:mm
     /// </summary>
     [JsonPropertyName("initial_time")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? InitialTime { get; set; }
     
     /// <summary>
@@ -67,41 +55,30 @@ public class PickerTime : Element
     /// - [100,∞)px: 自定义宽度
     /// </remarks>
     [JsonPropertyName("width")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Width { get; set; }
     
     /// <summary>
     /// 是否禁用
     /// </summary>
     [JsonPropertyName("disabled")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Disabled { get; set; }
 
     /// <summary>
     /// 禁用提示
     /// </summary>
     [JsonPropertyName("disabled_tips")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? DisabledTips { get; set; }
 
     /// <summary>
     /// 二次确认配置
     /// </summary>
     [JsonPropertyName("confirm")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ConfirmConfig? Confirm { get; set; }
 
     /// <summary>
     /// 交互行为列表
     /// </summary>
     [JsonPropertyName("behaviors")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<object>? Behaviors { get; set; }
 
-    /// <summary>
-    /// 外边距
-    /// </summary>
-    [JsonPropertyName("margin")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? Margin { get; set; }
-}
+    }

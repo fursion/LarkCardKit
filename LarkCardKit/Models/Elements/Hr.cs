@@ -13,17 +13,4 @@ public class Hr : Element
     /// <inheritdoc/>
     public override string Tag => "hr";
 
-    /// <summary>
-    /// 元素唯一标识
-    /// </summary>
-    [JsonPropertyName("element_id")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? ElementId { get; set; }
-
-    /// <summary>
-    /// 外边距
-    /// </summary>
-    [JsonPropertyName("margin")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? Margin { get; set; }
-}
+    }

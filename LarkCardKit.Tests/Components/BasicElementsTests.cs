@@ -1,4 +1,5 @@
 using LarkCardKit.Builders;
+using LarkCardKit.Config;
 using LarkCardKit.Models.Elements;
 using Xunit;
 using System.Text.Json;
@@ -8,11 +9,7 @@ namespace LarkCardKit.Tests.Components;
 [Trait("Category", "Unit")]
 public class BasicElementsTests
 {
-    private readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
-    {
-        WriteIndented = false,
-        DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    };
+    private static readonly JsonSerializerOptions _jsonOptions = JsonOptions.DefaultOptions;
 
     public class PlainTextTests
     {
@@ -59,9 +56,9 @@ public class BasicElementsTests
                 .ElementId("json-test")
                 .Build();
 
-            var json = JsonSerializer.Serialize(plainText);
+            var json = JsonSerializer.Serialize(plainText, _jsonOptions);
             
-            Assert.Contains("\"Tag\":\"plain_text\"", json);
+            Assert.Contains("\"tag\":\"plain_text\"", json);
             Assert.Contains("JSON", json);
             Assert.Contains("\"text_size\":\"normal\"", json);
             Assert.Contains("\"element_id\":\"json-test\"", json);
@@ -77,7 +74,7 @@ public class BasicElementsTests
                 .Content("# Hello\n**粗体**和*斜体*")
                 .Build();
 
-            Assert.Equal("lark_md", markdown.Tag);
+            Assert.Equal("markdown", markdown.Tag);
             Assert.Equal("# Hello\n**粗体**和*斜体*", markdown.Content);
         }
 
@@ -228,7 +225,7 @@ public class BasicElementsTests
                 .ElementId("full-test")
                 .Build();
 
-            var json = JsonSerializer.Serialize(markdown);
+            var json = JsonSerializer.Serialize(markdown, _jsonOptions);
 
             Assert.Contains("content", json);
             Assert.Contains("\"text_size\":\"large\"", json);

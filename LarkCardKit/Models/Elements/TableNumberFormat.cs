@@ -17,7 +17,6 @@ public class TableNumberFormat
     /// 支持 1 个字符的货币单位文本，如 "¥"、"$"。
     /// </remarks>
     [JsonPropertyName("symbol")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Symbol { get; set; }
     
     /// <summary>
@@ -27,7 +26,6 @@ public class TableNumberFormat
     /// 支持 [0,10] 的整数。默认不限制小数点位数。
     /// </remarks>
     [JsonPropertyName("precision")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int? Precision { get; set; }
     
     /// <summary>
@@ -37,6 +35,5 @@ public class TableNumberFormat
     /// 默认值 false。
     /// </remarks>
     [JsonPropertyName("separator")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? Separator { get; set; }
 }

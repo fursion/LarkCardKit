@@ -32,13 +32,11 @@ public class LoopDataSource
     /// 列表数据
     /// </summary>
     [JsonPropertyName("list")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<object>? List { get; set; }
     
     /// <summary>
     /// 其他自定义属性
     /// </summary>
     [JsonExtensionData]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, object>? AdditionalData { get; set; }
 }

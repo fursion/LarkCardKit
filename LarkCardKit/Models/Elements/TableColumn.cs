@@ -27,7 +27,6 @@ public class TableColumn
     /// 在表头展示的列名称。不填或为空则不展示列名称。
     /// </remarks>
     [JsonPropertyName("display_name")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? DisplayName { get; set; }
     
     /// <summary>
@@ -40,7 +39,6 @@ public class TableColumn
     /// - 自定义百分比：如 25%，取值范围 [1%, 100%]
     /// </remarks>
     [JsonPropertyName("width")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Width { get; set; }
     
     /// <summary>
@@ -57,7 +55,6 @@ public class TableColumn
     /// - markdown：支持完整 Markdown 语法的文本内容
     /// </remarks>
     [JsonPropertyName("data_type")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? DataType { get; set; }
     
     /// <summary>
@@ -67,7 +64,6 @@ public class TableColumn
     /// 可选值：top（顶部对齐）、center（中间对齐）、bottom（底部对齐）
     /// </remarks>
     [JsonPropertyName("vertical_align")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? VerticalAlign { get; set; }
     
     /// <summary>
@@ -78,7 +74,6 @@ public class TableColumn
     /// 默认数字类型的数据右对齐，其它文本左对齐。
     /// </remarks>
     [JsonPropertyName("horizontal_align")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? HorizontalAlign { get; set; }
     
     /// <summary>
@@ -88,7 +83,6 @@ public class TableColumn
     /// 仅当 data_type 为 number 时生效。
     /// </remarks>
     [JsonPropertyName("format")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public TableNumberFormat? Format { get; set; }
     
     /// <summary>
@@ -99,6 +93,5 @@ public class TableColumn
     /// 推荐格式：YYYY/MM/DD、YYYY-MM-DD、YYYY/MM/DD HH:mm 等。
     /// </remarks>
     [JsonPropertyName("date_format")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? DateFormat { get; set; }
 }

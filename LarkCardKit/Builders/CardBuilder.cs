@@ -280,18 +280,7 @@ public class CardBuilder
         
         if (input.Disabled != null)
         {
-            if (input.Disabled is string disabledStr && disabledStr.Contains("${"))
-            {
-                var filled = _filler.FillString(disabledStr);
-                if (bool.TryParse(filled, out var boolValue))
-                {
-                    input.Disabled = boolValue;
-                }
-                else
-                {
-                    input.Disabled = filled;
-                }
-            }
+            // Disabled is now bool?, no longer supports template strings
         }
         
         if (input.DisabledTips != null)
@@ -628,6 +617,7 @@ public class CardBuilder
             var replaced = elements[i] switch
             {
                 TextDiv textDiv => ReplaceInTextDiv(textDiv, elementId, newElement),
+                PlainTextElement plainTextElement => ReplaceInPlainTextElement(plainTextElement, elementId, newElement),
                 Form form => ReplaceInForm(form, elementId, newElement),
                 ColumnSet columnSet => ReplaceInColumnSet(columnSet, elementId, newElement),
                 _ => false
@@ -646,6 +636,22 @@ public class CardBuilder
         {
             textDiv.Text = newElement as PlainText ?? textDiv.Text;
             return true;
+        }
+        
+        return false;
+    }
+    
+    private bool ReplaceInPlainTextElement(PlainTextElement plainTextElement, string elementId, Element newElement)
+    {
+        if (plainTextElement.Text != null && plainTextElement.Text.ElementId == elementId)
+        {
+            plainTextElement.Text = newElement;
+            return true;
+        }
+        
+        if (plainTextElement.Elements != null && plainTextElement.Elements.Count > 0)
+        {
+            return ReplaceElementRecursive(plainTextElement.Elements, elementId, newElement);
         }
         
         return false;

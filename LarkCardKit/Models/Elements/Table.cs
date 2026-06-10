@@ -26,7 +26,6 @@ public class Table : Element
     /// 支持 [1,10] 整数，默认值 5。
     /// </remarks>
     [JsonPropertyName("page_size")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int? PageSize { get; set; }
     
     /// <summary>
@@ -41,7 +40,6 @@ public class Table : Element
     /// - [32,124]px：自定义行高，如 40px
     /// </remarks>
     [JsonPropertyName("row_height")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? RowHeight { get; set; }
     
     /// <summary>
@@ -51,7 +49,6 @@ public class Table : Element
     /// 当 row_height 为 auto 时生效。取值范围 [32,999]px。
     /// </remarks>
     [JsonPropertyName("row_max_height")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? RowMaxHeight { get; set; }
     
     /// <summary>
@@ -62,14 +59,12 @@ public class Table : Element
     /// false：不冻结首列（默认值）
     /// </remarks>
     [JsonPropertyName("freeze_first_column")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? FreezeFirstColumn { get; set; }
     
     /// <summary>
     /// 表头样式风格
     /// </summary>
     [JsonPropertyName("header_style")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public TableHeaderStyle? HeaderStyle { get; set; }
     
     /// <summary>
@@ -79,7 +74,6 @@ public class Table : Element
     /// 最多支持添加 50 列，超出 50 列的内容不展示。
     /// </remarks>
     [JsonPropertyName("columns")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<TableColumn>? Columns { get; set; }
     
     /// <summary>
@@ -90,13 +84,6 @@ public class Table : Element
     /// name 即你自定义的列标记。
     /// </remarks>
     [JsonPropertyName("rows")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Dictionary<string, object?>>? Rows { get; set; }
 
-    /// <summary>
-    /// 外边距
-    /// </summary>
-    [JsonPropertyName("margin")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? Margin { get; set; }
-}
+    }

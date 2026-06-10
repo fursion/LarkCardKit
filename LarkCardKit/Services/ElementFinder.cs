@@ -108,6 +108,7 @@ public class ElementFinder : IElementFinder
             var found = element switch
             {
                 TextDiv textDiv => FindInTextDiv(textDiv, elementId),
+                PlainTextElement plainTextElement => FindInPlainTextElement(plainTextElement, elementId),
                 Form form => FindInForm(form, elementId),
                 ColumnSet columnSet => FindInColumnSet(columnSet, elementId),
                 _ => null
@@ -128,6 +129,26 @@ public class ElementFinder : IElementFinder
                 return textDiv.Text;
 
             var foundInText = FindInNestedElement(textDiv.Text, elementId);
+            if (foundInText != null)
+                return foundInText;
+        }
+
+        return null;
+    }
+
+    private Element? FindInPlainTextElement(PlainTextElement plainTextElement, string elementId)
+    {
+        if (plainTextElement.Elements != null && plainTextElement.Elements.Count > 0)
+        {
+            return FindElementRecursive(plainTextElement.Elements, elementId);
+        }
+
+        if (plainTextElement.Text != null)
+        {
+            if (plainTextElement.Text.ElementId == elementId)
+                return plainTextElement.Text;
+
+            var foundInText = FindInNestedElement(plainTextElement.Text, elementId);
             if (foundInText != null)
                 return foundInText;
         }
@@ -168,6 +189,7 @@ public class ElementFinder : IElementFinder
         return element switch
         {
             TextDiv textDiv => FindInTextDiv(textDiv, elementId),
+            PlainTextElement plainTextElement => FindInPlainTextElement(plainTextElement, elementId),
             Form form => FindInForm(form, elementId),
             ColumnSet columnSet => FindInColumnSet(columnSet, elementId),
             _ => null
@@ -187,6 +209,16 @@ public class ElementFinder : IElementFinder
                     if (textDiv.Text != null && textDiv.Text.Tag == tag)
                         results.Add(textDiv.Text);
                     FindElementsByTagInNestedElement(textDiv.Text, tag, results);
+                    break;
+
+                case PlainTextElement plainTextElement:
+                    if (plainTextElement.Elements != null)
+                    {
+                        FindElementsByTagRecursive(plainTextElement.Elements, tag, results);
+                    }
+                    if (plainTextElement.Text != null && plainTextElement.Text.Tag == tag)
+                        results.Add(plainTextElement.Text);
+                    FindElementsByTagInNestedElement(plainTextElement.Text, tag, results);
                     break;
 
                 case Form form:
@@ -215,6 +247,16 @@ public class ElementFinder : IElementFinder
                 if (textDiv.Text != null && textDiv.Text.Tag == tag)
                     results.Add(textDiv.Text);
                 FindElementsByTagInNestedElement(textDiv.Text, tag, results);
+                break;
+
+            case PlainTextElement plainTextElement:
+                if (plainTextElement.Elements != null)
+                {
+                    FindElementsByTagRecursive(plainTextElement.Elements, tag, results);
+                }
+                if (plainTextElement.Text != null && plainTextElement.Text.Tag == tag)
+                    results.Add(plainTextElement.Text);
+                FindElementsByTagInNestedElement(plainTextElement.Text, tag, results);
                 break;
 
             case Form form:

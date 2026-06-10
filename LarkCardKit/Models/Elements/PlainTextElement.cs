@@ -47,7 +47,6 @@ public class PlainTextElement : Element
     /// 支持 PlainText（纯文本）或 Markdown（富文本）两种类型
     /// </remarks>
     [JsonPropertyName("text")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Element? Text { get; set; }
 
     /// <summary>
@@ -57,7 +56,6 @@ public class PlainTextElement : Element
     /// 当使用 direction 属性进行布局时，可使用 elements 字段
     /// </remarks>
     [JsonPropertyName("elements")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Element>? Elements { get; set; }
 
     /// <summary>
@@ -68,7 +66,6 @@ public class PlainTextElement : Element
     /// <c>"horizontal"</c> - 水平布局
     /// </value>
     [JsonPropertyName("direction")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Direction { get; set; }
 
     /// <summary>
@@ -76,7 +73,6 @@ public class PlainTextElement : Element
     /// </summary>
     /// <example>"4px", "8px 12px", "8px 12px 8px 12px"</example>
     [JsonPropertyName("padding")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Padding { get; set; }
 
     /// <summary>
@@ -84,7 +80,6 @@ public class PlainTextElement : Element
     /// </summary>
     /// <example>"small", "medium", "8px"</example>
     [JsonPropertyName("vertical_spacing")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? VerticalSpacing { get; set; }
 
     /// <summary>
@@ -92,7 +87,6 @@ public class PlainTextElement : Element
     /// </summary>
     /// <example>"small", "medium", "8px"</example>
     [JsonPropertyName("horizontal_spacing")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? HorizontalSpacing { get; set; }
 
     /// <summary>
@@ -104,7 +98,6 @@ public class PlainTextElement : Element
     /// <c>"right"</c> - 右对齐
     /// </value>
     [JsonPropertyName("horizontal_align")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? HorizontalAlign { get; set; }
 
     /// <summary>
@@ -116,7 +109,6 @@ public class PlainTextElement : Element
     /// <c>"bottom"</c> - 底部对齐
     /// </value>
     [JsonPropertyName("vertical_align")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? VerticalAlign { get; set; }
 
     /// <summary>
@@ -124,7 +116,6 @@ public class PlainTextElement : Element
     /// </summary>
     /// <example>"100px", "200px"</example>
     [JsonPropertyName("width")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Width { get; set; }
 
     /// <summary>
@@ -132,6 +123,5 @@ public class PlainTextElement : Element
     /// </summary>
     /// <example>"bg-grey", "bg-blue-light"</example>
     [JsonPropertyName("background_style")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? BackgroundStyle { get; set; }
 }

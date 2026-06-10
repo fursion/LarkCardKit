@@ -23,15 +23,12 @@ public class TextTag
     /// 用于在调用组件相关接口中指定元素。
     /// 仅允许使用字母、数字和下划线，必须以字母开头，不得超过 20 字符。
     /// </remarks>
-    [JsonPropertyName("element_id")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? ElementId { get; set; }
     
     /// <summary>
     /// 标签文本内容（支持 plain_text 和 lark_md 两种模式）
     /// </summary>
     [JsonPropertyName("text")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Element? Text { get; set; }
     
     /// <summary>
@@ -41,6 +38,5 @@ public class TextTag
     /// 可选值：neutral, blue, turquoise, lime, orange, violet, indigo, wathet, green, yellow, red, purple, carmine
     /// </remarks>
     [JsonPropertyName("color")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Color { get; set; }
 }

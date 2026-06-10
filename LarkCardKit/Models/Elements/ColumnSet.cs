@@ -17,24 +17,15 @@ public class ColumnSet : Element
     public List<Column> Columns { get; set; } = new();
     
     /// <summary>
-    /// 外边距
-    /// </summary>
-    [JsonPropertyName("margin")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? Margin { get; set; }
-    
-    /// <summary>
     /// 背景样式
     /// </summary>
     [JsonPropertyName("background_style")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? BackgroundStyle { get; set; }
     
     /// <summary>
     /// 水平间距
     /// </summary>
     [JsonPropertyName("horizontal_spacing")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? HorizontalSpacing { get; set; }
 
     /// <summary>
@@ -44,7 +35,6 @@ public class ColumnSet : Element
     /// 可选值：none（不弹性）、flow（流动布局）
     /// </remarks>
     [JsonPropertyName("flex_mode")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? FlexMode { get; set; }
 }
 
@@ -60,14 +50,12 @@ public class Column : Element
     /// 列宽度，支持 auto 或自定义值
     /// </summary>
     [JsonPropertyName("width")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Width { get; set; }
     
     /// <summary>
     /// 垂直对齐方式
     /// </summary>
     [JsonPropertyName("vertical_align")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? VerticalAlign { get; set; }
     
     /// <summary>

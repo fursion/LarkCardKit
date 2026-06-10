@@ -17,76 +17,57 @@ public class TextDiv : Element
     /// 文本内容（只能是 PlainText）
     /// </summary>
     [JsonPropertyName("text")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PlainText? Text { get; set; }
     
     /// <summary>
     /// 布局方向
     /// </summary>
     [JsonPropertyName("direction")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Direction { get; set; }
     
     /// <summary>
     /// 内边距
     /// </summary>
     [JsonPropertyName("padding")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Padding { get; set; }
     
     /// <summary>
     /// 垂直间距
     /// </summary>
     [JsonPropertyName("vertical_spacing")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? VerticalSpacing { get; set; }
     
     /// <summary>
     /// 水平间距
     /// </summary>
     [JsonPropertyName("horizontal_spacing")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? HorizontalSpacing { get; set; }
     
     /// <summary>
     /// 水平对齐方式
     /// </summary>
     [JsonPropertyName("horizontal_align")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? HorizontalAlign { get; set; }
     
     /// <summary>
     /// 垂直对齐方式
     /// </summary>
     [JsonPropertyName("vertical_align")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? VerticalAlign { get; set; }
     
     /// <summary>
     /// 背景样式
     /// </summary>
     [JsonPropertyName("background_style")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? BackgroundStyle { get; set; }
     
     /// <summary>
     /// 元素 ID
     /// </summary>
-    [JsonPropertyName("element_id")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? ElementId { get; set; }
-    
-    /// <summary>
-    /// 外边距
-    /// </summary>
-    [JsonPropertyName("margin")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public new string? Margin { get; set; }
     
     /// <summary>
     /// 宽度
     /// </summary>
     [JsonPropertyName("width")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Width { get; set; }
 }
